@@ -14,3 +14,28 @@
 // sayHola("Bob");    
 
 
+function a(b){
+  console.log(b)
+  b()
+}
+
+(function (){
+  console.log("Hiii")
+})()
+//this is a IIFE
+
+//higher order functions basic example
+// debugger;
+function ad(){
+  console.log("Hello this is a normal function")
+}
+
+function callMe(func){
+  func()
+}
+
+callMe(ad)
+
+console.log("Hello")
+
+
