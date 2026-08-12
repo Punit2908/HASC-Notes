@@ -61,3 +61,4 @@ const obj = {name:"Rahul",
 obj.multiply(2,3)
 console.log(obj.userName);
 
+
