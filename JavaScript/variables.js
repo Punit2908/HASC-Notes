@@ -56,3 +56,35 @@ console.log(typeof(num))
 console.log(typeof(no))//js has error in print this type and shows object instead of null
 
 // let nan = parseInt(prompt("Enter a number"))
+
+let str = `Hello`+ +`World`
+console.log(str);
+console.log(typeof(NaN))
+//NaN is a type itself js use number dikhata hai
+
+//functions to convert string to integer
+// let number2 = parseInt('20h3');
+
+// let variable = 45
+// let variable = parseInt(prompt("Enter your age"))
+// let ageGreeet = `Hello I am ${variable} year old`
+// console.log(ageGreeet);
+
+// alert("Are you sure you want to visit this store")
+
+//strings
+let helo = "Hello I am a I string"//0-18
+console.log(helo[18])
+//methods on string
+console.log(helo.toUpperCase().trim());
+console.log(helo.toLowerCase());
+console.log(helo.trim());
+
+console.log(helo.includes("ami"));
+console.log(helo.indexOf("I"));
+console.log(helo.replaceAll("I","You"));
+console.log(helo.concat(" And I am using concat function"));
+
+console.log(helo.split(" "));
+
+

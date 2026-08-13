@@ -62,3 +62,54 @@ obj.multiply(2,3)
 console.log(obj.userName);
 
 
+let arr = [1,2,3,4,5,6,7,8,9,10]
+
+arr.forEach((el)=>{
+  console.log(el);
+})
+
+let newarr = arr.map((el)=>{return el*2})
+console.log(newarr);
+
+arr.filter((el)=>{console.log(el>5);
+})
+//5 se bdo pe true less than me false
+
+let newarr2 = arr.reduce((acc,el,idx,arr)=>{
+  console.log(idx,arr);
+  
+  return acc*=el},1)
+console.log(newarr2);
+
+//some
+let evenArr = [2,1,7,81]
+
+let result1 = evenArr.some((el)=>{
+  return el%2==0;
+})
+console.log(result1);
+let result2 = evenArr.every((el)=>{
+  return el%2!=0
+})
+
+console.log(result2);
+
+//spread opretor
+let oddArr = [...evenArr]
+oddArr.pop()
+console.log(evenArr,oddArr);
+let name2 = "nisha"
+let name3 = [...name2]
+console.log(name3);
+
+//reverse the name from array
+//homework
+
+const boj = {name:"Paul",age:20,city:"london"}
+const obj2 = {...boj}
+console.log(obj2);
+const number4 = 12456
+// number4[1]
+// const number5 = [...number4]
+// console.log(number5);
+// numbers are non iterable so spread won't work there
