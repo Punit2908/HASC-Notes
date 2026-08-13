@@ -38,7 +38,7 @@ let names = ["Vinit","Nisha","Tammana","Rashi","Punit","Kavya"]
 names.filter(el=>{console.log(el == "Vinit");
  })
 
-let result = arr.reduce((acc,el)=>{return acc*=el},1)
+let result = arr.reduce((res,el)=>{return res*=el},1)
 console.log(result);
 
 const result2 = arr.some((el)=>{return el>8})
