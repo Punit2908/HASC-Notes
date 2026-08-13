@@ -1,22 +1,33 @@
-This is first line
-Hello I am general file
-Hello I am general file
-Hello I am general file
-Hello I am general file
-Hello I am general file
-Hello I am general file
-This line is created with the help of nano text editor.
-This line is created with the help of nano text editor.
-This line is created with the help of nano text editor.
-This line is created with the help of nano text editor.
-This line is created with the help of nano text editor.
-This line is created with the help of nano text editor.
-Hello 
-Hello 
-Hello 
-Hello 
-Hello 
-Hello 
-Hello 
+what is operating system?
 
-This is last line
+basic linux commands
+vs code(text editors)
+
+//outdated
+html
+CSS(pure)(heavy)
+Javascript(logic building/functional)
+
+react for frontend
+//routing
+tailwind(easy to use)
+
+Backend
+//actual data of an website
+
+Nodejs
+ExpressJs
+//authentication
+//authorization
+//routes
+
+
+//database
+relational - tabular //sql
+non-relational - json format //mongodb
+
+advance cyber
+//tools
+ethical hacking
+
+

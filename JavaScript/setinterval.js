@@ -113,3 +113,4 @@ const number4 = 12456
 // const number5 = [...number4]
 // console.log(number5);
 // numbers are non iterable so spread won't work there
+
