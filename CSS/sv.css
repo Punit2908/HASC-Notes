@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+LA+Guides&display=swap');
+*{
+    font-family: "Playwrite DE LA Guides", cursive;
+}
+.parent{
+    font-size: 20px;
+    
+    background-color: bisque;
+    /* width: 200px; */
+}
+.parent div{
+    font-size: 1.2em;
+    /* 1em = .parent ke font-size ke equal */
+    /* px, 1rem = 16px ,1em = parent ke default size pe depend krti hai*/
+    font-weight: 600;
+    /* height: 100px; */
+    font-style: italic;
+    /* font-display:initial; */
+    line-height: 60px;
+    /* letter-spacing: 1px; */
+    text-align: center;
+    text-decoration: underline;
+    text-transform: capitalize;
+    /* text-overflow: ; */
+    text-shadow: 10px 10px 2px red;
+    
+}
