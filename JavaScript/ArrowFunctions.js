@@ -47,4 +47,9 @@ console.log(result2);
 const result3 = arr.every((el)=>{return el>3})
 console.log(result3);
 
-//spread operator
+// let myopr = 2
+// function myoprPrint(){
+//     console.log(myopr);
+    
+// }
+// myoprPrint()

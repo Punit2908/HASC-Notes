@@ -1,27 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+LA+Guides&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 *{
-    font-family: "Playwrite DE LA Guides", cursive;
+    margin: 0;
+    padding: 0;
+    font-family: "Outfit", sans-serif;
 }
+
 .parent{
-    font-size: 20px;
-    
-    background-color: bisque;
-    /* width: 200px; */
-}
-.parent div{
-    font-size: 1.2em;
-    /* 1em = .parent ke font-size ke equal */
-    /* px, 1rem = 16px ,1em = parent ke default size pe depend krti hai*/
-    font-weight: 600;
     /* height: 100px; */
-    font-style: italic;
-    /* font-display:initial; */
-    line-height: 60px;
-    /* letter-spacing: 1px; */
-    text-align: center;
-    text-decoration: underline;
-    text-transform: capitalize;
-    /* text-overflow: ; */
-    text-shadow: 10px 10px 2px red;
-    
+    /* width: 100px; */
+    background-color: rgb(124, 62, 62);
+    margin: 30px;
+    padding: 30px;
+}
+
+.parent div{
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(200, 48, 200);
+    background-color: rgb(169, 217, 118);
+    font-style: oblique;
+    text-align: justify;
+    padding: 30px;
+    margin: 30px;
+    text-decoration: underline dotted rgb(206, 19, 19);
+    text-shadow: 10px 10px 3px black;
+    letter-spacing: 2px;
+    line-height: 40px;
+    /* word-spacing:  */
+    text-transform: lowercase;
 }
