@@ -88,3 +88,11 @@ console.log(helo.concat(" And I am using concat function"));
 console.log(helo.split(" "));
 
 
+let aa = 10
+let bb = 20
+console.log(aa*bb);
+console.log("Hello world");
+let str2 = "Hello Munish"
+console.log(str2);
+
+
