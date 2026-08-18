@@ -1,0 +1,47 @@
+div{
+    margin: auto;
+    margin-top: 90px;
+    height: 200px;
+    width: 200px;
+    /* box-shadow: 1px 1px 2px black; */
+    /* border: 1px dotted blue; */
+    border-radius: 50%;
+    background-color: grey;
+    border-top: 20px solid black;
+    /* visibility: hidden; */
+    opacity: 0.7;
+    padding: 10px;
+    overflow: hidden;
+}
+div:hover{
+    box-shadow: 2px 2px 4px black;
+}
+
+input{
+    outline: none;
+    border: 1px solid blanchedalmond;
+    border-radius: 20px;
+    background-color: lightgoldenrodyellow;
+    padding: 5px;
+}
+input::placeholder{
+    color: rgb(177, 195, 195);
+    font-weight: bold;
+    padding: 10px;
+}
+
+button{
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    /* top right bottom left    top-bottom left-right */
+    margin: 10px 20px;
+    background-color: rgb(96, 199, 164);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+ul{
+    list-style: georgian;
+    /* font-weight: bold; */
+}
