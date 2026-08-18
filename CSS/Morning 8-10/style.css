@@ -1,0 +1,63 @@
+/* selectors */
+
+/* Universal Selector */
+*{
+    font-size: 20px;
+}
+
+/* tags */
+div{
+    color: palegreen;
+    background-color: black;
+    font-size: 15px;
+}
+
+/* class selectors */
+.hero{
+    color: palegreen;
+    background-color: black;
+}
+
+/* id Selectors */
+#villian{
+    color: rebeccapurple;
+    background-color: darkcyan;
+}
+
+/* 
+    specificity: (0,0,0)
+    id: (1,0,0)
+    class: (0,1,0)
+    tag: (0,0,1)
+*/
+.hero #first{
+    color: red;
+}
+#first{
+    color: chartreuse !important;
+}
+
+div{
+    color: aquamarine;
+    background-color: gray;
+}
+
+
+div div p{
+    color: rebeccapurple;
+    background-color: yellowgreen;
+}
+p{
+    color: black;
+}
+/* important>inline>nested id>id>nested class>class>nested tags>tags>universal */
+
+
+/* pseudo selectors */
+#first:hover{
+    color: aqua !important;
+    background-color: darkolivegreen;
+}
+div div p:hover{
+    font-size: 28px;
+}
