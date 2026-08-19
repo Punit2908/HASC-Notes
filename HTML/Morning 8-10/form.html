@@ -1,49 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forms</title>
+    <title>Login form</title>
 </head>
+
 <body>
     <form action="submit">
         <fieldset>
-            <legend>User Form</legend>
-        <label for="username">Enter your name </label>
-        <input type="text" name="username" id="username" placeholder="Username">
+            <legend>Login Form</legend>
+            <label for="name">Enter your name</label>
+            <input type="text" id="name" name="username">
 
-        <input type="number">
-        <input type="email">
-        <input type="color">
-        <input type="date">
-        <input type="datetime">
-        <input type="datetime-local">
-        <input type="file">
-        <input type="month">
-        <input type="range" min="0" max="100" maxlength="100">
-        <input type="password">
+            <br>
+            <label for="email">Enter your mail id</label>
+            <input type="email" id="email" name="email">
 
-        <br>
-        Select your languages <br>
-        English
-        <input type="checkbox">
-        Hindi
-        <input type="checkbox">
-        Punjabi
-        <input type="checkbox">
-        <br>
-        Male
-        <input type="radio" name="gender" value="male">
-        Female
-        <input type="radio" name="gender" value="female">
-        Binary
-        <input type="radio" name="gender">
-        Others
-        <input type="radio" name="gender">
+            <input type="button" value="Button">
+            <br><br>
+            <div>Enter Your prefered subjects</div>
+            English
+            <input type="checkbox" name="English">
+            Hindi
+            <input type="checkbox" name="Hindi">
+            Sanskrit
+            <input type="checkbox" name="Sanskrit">
+            <br>
+            <input type="number">
+            <input type="password" name="password">
+            <br><br>
+            <input type="color"><br>
+            <br>
+            <input type="datetime-local">
+            <input type="file">
+            <div>Enter your gender</div>
+            Male
+            <input type="radio" name="gender">
+            Female
+            <input type="radio" name="gender">
+            Others
+            <input type="radio" name="gender">
+            <br>
+            <br>
+            <input type="range" min="0" max="100">
+            <br>
+            <input type="reset">
+            <input type="week">
+            <br>
 
-        <br>
-        <input type="submit" value="submit">
+            <input type="submit">
         </fieldset>
     </form>
 </body>
+
 </html>

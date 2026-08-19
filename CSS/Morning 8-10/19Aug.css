@@ -1,0 +1,68 @@
+/* selectors */
+/* tag names */
+div {
+    /* key: value;//property; */
+    color: rgb(208, 143, 234);
+    background-color: rgb(60, 48, 16);
+}
+
+/* class selectors */
+.hero {
+    color: aqua;
+    background-color: black;
+    margin: 20px;
+    padding: 10px;
+}
+
+/* id selectors */
+#first {
+    color: rebeccapurple;
+    background-color: gray;
+}
+
+/* Nested selectors */
+p {
+    color: white;
+    background-color: darkblue;
+}
+
+div p {
+    color: aquamarine;
+    background-color: darkcyan;
+}
+
+.third {
+    color: red;
+}
+
+#third {
+    color: green;
+}
+
+div #third {
+    color: antiquewhite;
+}
+
+.villian #third {
+    color: blueviolet;
+    background-color: black;
+}
+
+/* same specificity pe bhi jo last me aata hai uski sunta hai */
+div {
+    color: cadetblue;
+    background-color: #fff;
+}
+
+/* universal selector : weakest specificity*/
+* {
+    color: green;
+    background-color: black !important;
+}
+
+#star {
+    color: red;
+    background-color: #fff;
+}
+
+/* priority list:   important>inline>nesed id>id>nested class>class>nested tags>tags>universal */
