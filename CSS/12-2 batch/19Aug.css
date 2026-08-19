@@ -1,0 +1,29 @@
+body{
+    /* background: url(./bg.jpeg) center/ cover no-repeat scroll; */
+    /* background: radial-gradient(red,green,yellow); */
+    background: linear-gradient(red,blue,green);
+    min-height: 100vh;
+}
+.container{
+    /* display: inline; */
+    display: flex;
+    /* main axis - x-axis */
+    /* cross axis - y-axis */
+    /* align-items: center; */
+    /* justify-content: space-evenly; */
+    /* flex-direction: column-reverse; */
+    flex-wrap: wrap;
+    gap: 50px;
+    height: 500px;
+    width: 500px;
+    background: radial-gradient(purple,pink);
+}
+.box{
+    /* display: inline; */
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(yellow,orange);
+    color: blueviolet;
+    font-weight: bold;
+    font-size: 1.3em;
+}
