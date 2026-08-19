@@ -76,5 +76,3 @@ console.log(name1[0]);
 console.log(name3.length);
 console.log(name3[9]);
 
-
-
