@@ -24,3 +24,8 @@ usr.addEventListener("input",(event)=>{
     // console.log(event);
     p.innerText = usr.value
 })
+
+document.addEventListener("keydown",(e)=>{
+    e.preventDefault()
+    p.innerText = e.key
+})
