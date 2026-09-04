@@ -1,0 +1,32 @@
+
+.container{
+    display: flex;
+    /* grid-template-rows: 1fr 4fr 2fr;
+    grid-template-columns: repeat(3,1fr); */
+    justify-content: center;
+    align-items: center;
+    /* height: 400px; */
+    animation: ani 0.3s linear infinite;
+}
+.box{
+    border: 1px solid black;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    /* justify-self: center; */
+    /* align-self: center; */
+    transition: all 0.3s linear;
+
+}
+
+.box:hover{
+    transform: translate(4px,4px) skew(10deg) rotate(10deg);
+    background-color: aqua;
+}
+
+@keyframes ani {
+
+    0% { transform: rotate(30deg); }
+    50% { transform: scale(1.1) rotate(45deg); }
+    100% { transform: scale(1) rotate(90deg); }
+}

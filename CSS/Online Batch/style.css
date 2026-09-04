@@ -1,32 +1,54 @@
-div{
-    color: #28c4ca;
-    /* name, rgb(red,green,blue) */
-    /* 0-255 */
-    /* hexcode  XXXXXX  */
-    background-color: #292929;
-    font-size: 20px;
-    /* 1.5rem = 1.5*16px */
-    /* px,em,rem */
-    /* cm,m,km */
-
-
-
-    /* 1rem = 16px */
-
-    /* vh ,vw */
-    height: 50%;
-    /* screen ka 50% area height legi */
-    width: 100%;
-}
-.child{
-    font-size: 2em;
-    /* 1em = 10px  depends upon the parent*/
-    text-align: center;
-    text-decoration: underline dotted rgb(161, 129, 194);
-    text-shadow: 10px 10px 20px white;
-    letter-spacing: 10px;
-    line-height: 30px;
-    word-spacing: 100px;
-    text-transform: lowercase;
+*{
+    color: rebeccapurple;
+    /* background-color: black; */
     
+}
+body{
+    /* background: linear-gradient(to bottom right,red,yellow,green); */
+    /* background: radial-gradient(red,blue,yellow); */
+    background: url("./download.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.child{
+    color: blue;
+    /* background: white; */
+}
+#hero{
+    color: azure;
+}
+.one{
+    color: red;
+}
+#two{
+    color: yellow;
+}
+
+p{
+    color: white;
+}
+.three{
+    color: red;
+}
+#four{
+    color: grey;
+}
+div #four{
+    color: aqua;
+}
+.one #four{
+    color:yellowgreen;
+}
+
+#two #four{
+    color: blueviolet !important;
+}
+
+div{
+    font-size: 10px;
+}
+div p{
+    font-size: 1.5rem;
 }
