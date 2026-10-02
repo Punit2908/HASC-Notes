@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: rgb(178, 234, 234);
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            flex-direction: column;
+        }
+        #container{
+            width: 500px;
+            height: 400px;
+            margin: auto;
+            background-color: rgb(87, 95, 160);
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            flex-direction: column;
+            /* border: 1px solid black; */
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .question{
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            font-size: 18px;
+            background-color: rgb(56, 54, 148);
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .answer{
+            width: 70%;
+            text-align: left;
+            font-size: 16px;
+            background-color: rgb(135, 185, 226);
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            /* color: white; */
+        }
+        button{
+            width: 150px;
+            height: 50px;
+            background-color: rgb(4, 68, 121);
+            color: white;
+            padding: 10px;
+            border: none;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h2>Quiz App</h2>
+    <div id="container">Press Start button to start the quiz....</div>
+    <button>Start Quiz</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

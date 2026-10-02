@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 50vh;
+        }
+        input{
+            margin: 10px 0px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <form action="submit">
+        <label for="name">Enter Your name</label>
+        <input type="text" id="name" name="name">
+        <label for="email">Enter your email</label>
+        <input type="email" id="email" name="email">
+        <label for="password">Enter Your password</label>
+        <input type="password" name="password" id="password">
+        <button id="submit">Submit</button>
+    </form>
+    <div id="result"></div>
+    <script src="script.js"></script>
+</body>
+</html>

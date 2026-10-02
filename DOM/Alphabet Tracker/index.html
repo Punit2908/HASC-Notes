@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* height: 100vh; */
+        }
+        input {
+            /* width: 100%; */
+            height: 50px;
+            border-radius: 5px;
+            border: none;
+            background-color: wheat;
+            outline: none;
+            padding: 10px;
+            font-size: 20px;
+        }
+        button {
+            /* width: 100%; */
+            height: 50px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .result {
+            background-color: rgb(70, 84, 110);
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;   
+            color: white;
+        }
+    </style>
+    <title>Component tracker</title>
+</head>
+<body>
+    <div id="container">
+        <input type="text">
+        <button id="vowels">Vowels</button>
+        <button id="consonants">Consonants</button>
+        <button id="uppercase">Uppercase</button>
+        <button id="lowercase">Lowercase</button>
+        <button id="capitalize">Capitalize</button>
+        <button id="reverse">Reverse</button>
+    </div>
+    <div class="result"></div>
+    <script src="script.js"></script>
+</body>
+</html>

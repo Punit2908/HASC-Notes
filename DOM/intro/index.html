@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .red{
+            background: red;
+            color: white;
+            font-weight: bolder
+        }
+    </style>
+    <title>DOM</title>
+</head>
+<body>
+    <div class="hero">This is an html page. 1</div>
+    <div id="villian" >This is an html page. 2</div>
+    <button>Click me</button>
+    <script>
+        // console.log(document.title)
+        // let div = document.querySelectorAll("div")
+        // let div = document.getElementsByClassName("hero").item(0)
+        let div = document.getElementById("villian")
+        let name = document.createElement("h1")
+        name.textContent = "This is made with dom"
+        div.appendChild(name)
+        // console.log(div)
+        // div.textContent = `<h2>Hello</h2>`
+        // div.forEach((el)=>{
+        //     el.innerText = `This is made with dom`
+        // })
+        // console.log(div.classList)
+        // console.log(div)
+        // div.textContent = `<h2>Hello</h2>`
+        // div.forEach((el)=>{
+        //     el.innerText = `This is made with dom`
+        // })
+        // console.log(div.classList)
+        let btn = document.querySelector("button")
+        btn.addEventListener("click",()=>{
+            div.classList.toggle("red")
+        })
+    </script>
+</body>
+</html>
