@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            display: flex;
+            /* flex-direction: column; */
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: rgb(228, 185, 185);
+            gap: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+
+            /* color: white; */
+        }
+        .container{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(123, 78, 141);
+            padding: 20px;
+            border-radius: 5px;
+            width: 300px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        input{
+            margin: 10px 0px;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+        label{
+            margin: 10px 0px;
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            padding: 5px;
+        }
+        button{
+            margin: 10px 0px;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            background-color: rgb(255, 255, 255);
+
+        }
+        #list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .task{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .name{
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0px;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: rgb(224, 156, 212);
+        }
+        .delete{
+            background-color: rgb(255, 0, 0);
+            color: white;
+            border: none;
+             padding: 5px;
+             border-radius: 5px;
+             outline: none;
+             cursor: pointer;
+             font-size: 16px;
+             font-weight: bold;
+        }
+        .check{
+            background-color: rgb(38, 110, 38);
+            color: white;
+             padding: 5px;
+             border-radius: 5px;
+             outline: none;
+             cursor: pointer;
+             font-size: 16px;
+             font-weight: bold;
+             border: none;
+        }
+        #submit{
+            background-color: rgb(38, 110, 38);
+            color: white;
+
+            padding: 5px;
+
+            border-radius: 5px;
+
+            outline: none;
+
+            cursor: pointer;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            border: none;
+        }
+        .done{
+            text-decoration: line-through;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Todo List</h1>
+
+        <form action="submit">
+            <label for="name">Enter the task</label>
+            <input type="text" placeholder="Add new task" id="name">
+            <label for="date">Enter the date</label>
+            <input type="datetime-local" id="date">
+            <button type="submit" id="submit">Add</button>
+        </form>
+
+    </div>
+    <div id="list"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
