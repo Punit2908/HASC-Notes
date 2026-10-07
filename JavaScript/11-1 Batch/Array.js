@@ -32,3 +32,39 @@ arr.pop() //end se remove krta hai
 console.log(arr)
 arr.shift() //start se remove krta hai
 console.log(arr)
+
+
+//Objects
+let obj =  {
+    name: "Sharman",
+    age: 25,
+    address: {
+        city: "Delhi",
+        country: "India",
+        pincode: 110001
+    }
+}
+
+console.log(obj)
+console.log(obj.name)
+console.log(obj.age)
+console.log(obj.address)
+obj.course = "Web Development"
+obj.age = 19
+console.log(obj)
+console.log(obj.address.city)
+
+//functions
+
+// function add(a,b){
+//     return a+b
+// }
+//arrow function
+const add =(a,b) =>{
+    return a+b
+}
+
+
+let res = add(10,20)
+console.log(res)
+

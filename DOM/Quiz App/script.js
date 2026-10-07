@@ -44,11 +44,13 @@ let n = questions.length;
 let i = 0;
 let container = document.getElementById("container");
 let btn = document.querySelector("button")
-
+let select = false;
+let correct = 0, wrong = 0;
 btn.addEventListener("click", e => {
     e.preventDefault()
     displayQuestion()
-    if(i == n+2){
+    check()
+    if (i == n + 2) {
         reset()
     }
 })
@@ -56,12 +58,12 @@ btn.addEventListener("click", e => {
 function displayQuestion() {
     container.innerHTML = ""
     if (i < n) {
-
+        select = false;
         container.innerHTML = `<div class="question">Question ${i + 1}: ${questions[i].question}</div>
-        <div class="answer">a. ${questions[i].a}</div>
-        <div class="answer">b. ${questions[i].b}</div>
-        <div class="answer">c. ${questions[i].c}</div>
-        <div class="answer">d. ${questions[i].d}</div>
+        <div class="answer" id="a">a. ${questions[i].a}</div>
+        <div class="answer" id="b">b. ${questions[i].b}</div>
+        <div class="answer" id="c">c. ${questions[i].c}</div>
+        <div class="answer" id="d">d. ${questions[i].d}</div>
     `
         if (i == n - 1) {
             btn.innerHTML = "Submit"
@@ -74,13 +76,40 @@ function displayQuestion() {
     }
     i++;
     console.log(i)
-    container.innerHTML = `Quiz Completed`
+    container.innerHTML = `<h2>Quiz Completed!</h2><h3>You scored ${correct} correct and ${wrong} wrong</h3>`
     btn.innerHTML = "Restart"
 
 }
 
 
+function check() {
+    
+        
+        let ans = document.querySelectorAll(".answer")
+        console.log(ans)
+        ans.forEach(e => {
+            // e.classList.remove("selected")
+            e.addEventListener("click", e => {
+                if(select) return
+                e.target.classList.add("selected")
+                
+                if(e.target.id == questions[i-1].correct){
+                    correct++
+                    console.log("Correct",correct)
+                }else{
+                    wrong++
+                    console.log("Wrong",wrong)
+                }
+                select = true
+            })
+        })
+    }
+    console.log(select)
+
+
 function reset() {
     i = 0;
+    correct = 0;
+    wrong = 0;
     displayQuestion()
 }
