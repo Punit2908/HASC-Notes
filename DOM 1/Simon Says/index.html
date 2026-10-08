@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            /* background-color: black; */
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: cornflowerblue;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .top{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            /* background-color: red; */
+        }
+        .bottom{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .red{
+            width: 150px;
+            height: 150px;
+            border-radius: 150%;
+            background-color: red;
+        }
+        .blue{
+            width: 150px;
+            height: 150px;
+            border-radius: 150%;
+            background-color: blue;
+        }
+        .green{
+            width: 150px;
+            height: 150px;
+            border-radius: 150%;
+            background-color: green;
+        }
+        .yellow{
+            width: 150px;
+            height: 150px;
+            border-radius: 150%;
+            background-color: yellow;
+        }
+        .flash{
+            background-color: #fff;
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h3>Simon Says</h3>
+    <h2>Press any key to start</h2>
+    <div class="container">
+        <div class="top">
+            <div class="red btn" id="red"></div>
+            <div class="blue btn" id="blue"></div>
+        </div>
+        <div class="bottom">
+            <div class="green btn" id="green"></div>
+            <div class="yellow btn" id="yellow"></div>
+        </div>
+    </div>
+    <div class="score"></div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -63,3 +63,62 @@ function lcm(num1, num2) {
     return Math.abs(num1 * num2) / gcd(num1, num2);
 }
 
+//largest common prefix in strings
+
+function largestCommonPrefix(array) {
+    let i = 0;
+    let ans = ""
+    let size = [] //optional
+    array.forEach(el => {
+        size.push(el.length)
+    }) //optional
+    let min = Math.min(...size) //optional
+    let word = array[0]
+    while (i < min) { //while(i<word.length){
+        let ch = word[i]
+        for (let j = 1; j < array.length; j++) {
+            if (array[j][i] != ch) {
+                return ans
+            }
+        }
+        ans += ch
+        i++
+    }
+    return ans
+}
+// console.log(largestCommonPrefix(["Shubham","Sharman","Shreya"]))
+//how to calculate diffrence in characters
+function isomorphicString(s, t) {
+    //your code goes here
+    if (s.length != t.length) {
+        return false
+    }
+    let diff = s.charCodeAt(0) - t.charCodeAt(0)
+    // console.log(diff)
+    for (let i = 1; i < s.length; i++) {
+        if (s.charCodeAt(i) - t.charCodeAt(i) != diff) {
+            return false
+        }
+    }
+    return true;
+}
+
+// console.log(isomorphicString('add','ehh'))
+
+//Rotate a string by k to left
+
+function rotateString(s,k) {
+    let ans = ""
+    for(let i=s.length-k;i<s.length;i++){
+        // console.log(s[i])
+        ans+=s[i]
+        // console.log(ans)
+    }
+    for(let i=0;i<s.length-k;i++){
+        // console.log(s[i])
+        ans+=s[i]
+        // console.log(ans)
+    }
+    return ans
+}
+console.log(rotateString("VANSHIKA",2))
