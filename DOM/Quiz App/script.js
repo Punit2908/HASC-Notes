@@ -55,6 +55,7 @@ btn.addEventListener("click", e => {
     }
 })
 
+
 function displayQuestion() {
     container.innerHTML = ""
     if (i < n) {

@@ -10,13 +10,25 @@
 // })
 
 // const div1 = document.getElementsByClassName('hero')
+const div = document.querySelector('div')
 const div1 = document.getElementById('first')
-const div2 = document.getElementsByClassName('hero')
-div1.style.color = 'blue'
-div1.style.backgroundColor = 'red'
-div1.style.fontSize = '20px'
+const div2 = document.getElementsByClassName('hero')[1]
+// const div2 = document.getElementsByClassName('hero')
+
 
 function addClass(){
-    div1.classList.toggle('jiya')
+    div.classList.toggle('orange')
+    div1.classList.toggle('white')
+    div2.classList.toggle('green')
+    div.innerHTML = `<h1>I</h1>`
+    // div.style.display = 'inline'
+    div1.innerHTML = `<h1>Love My</h1>`
+    div2.innerHTML = `<h1>Country</h1>`
 }
 
+let btn = document.querySelector('button')
+
+document.addEventListener("mouseleave",(e)=>{
+    console.log(e)
+    addClass()
+})
