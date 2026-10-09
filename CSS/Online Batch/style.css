@@ -26,3 +26,27 @@ div{
     border: 4px solid blue;
     border-radius: 100px;
 }
+
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: green;
+    border: 2px solid red;
+    border-radius: 50%;
+    transition: all 1s ease;
+}
+.box:hover{
+    background-color: blue;
+    border: 2px solid black;
+    /* visibility: hidden; */
+    /* display: none; */
+    /* opacity: 0; */
+    /* transform: translateX(10px); */
+    /* transform: translateY(10px); */
+    /* transform: rotate(45deg); */
+    /* transform: scale(0.7); */
+    /* transform: skew(-20deg) */
+    transform: translate(10px,10px) rotate(45deg) scale(0.7) skew(-20deg);
+}
+
+/* 5 boxes - each box 1 transform property */
