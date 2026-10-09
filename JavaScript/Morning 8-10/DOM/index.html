@@ -18,7 +18,7 @@
             height: 200px;
             border-radius: 10px;
         } */
-         .orange{
+         /* .orange{
             background-color: orange;
              color: white;
          }
@@ -28,16 +28,59 @@
          .green{
             background-color: green;
              color: white;
-         }
+         } */
+          form{
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+          }
+          label{
+              font-size: 20px;
+              font-weight: bold;
+              margin: 10px;
+          }
+          input{
+              font-size: 20px;
+              padding: 10px;
+              margin: 10px;
+          }
+          button{
+              font-size: 20px;
+              padding: 10px;
+              margin: 10px;
+              background-color: rgb(42, 31, 79);
+              color: white;
+          }
+          #result{
+              font-size: 20px;
+              font-weight: bold;
+              margin: 10px;
+          }
     </style>
     <title>Document</title>
 </head>
 <body>
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis perspiciatis ipsa modi, exercitationem harum error voluptas dignissimos animi est qui, excepturi vitae ab, facilis sunt autem et optio nobis incidunt.</div>
+    <!-- <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis perspiciatis ipsa modi, exercitationem harum error voluptas dignissimos animi est qui, excepturi vitae ab, facilis sunt autem et optio nobis incidunt.</div>
     <div class="hero" id="first">Hello world</div>
-    <div class="hero">Hello world</div>
+    <div class="hero">Hello world</div> -->
 
-    <button>Click me</button>
+    <!-- <div class="hero" id="first">Hello world</div> -->
+
+    <form action="submit">
+        <label for="principal">Principal:</label>
+        <input type="text" id="principal" name="principal">
+        <br>
+        <label for="rate">Rate:</label>
+        <input type="text" id="rate" name="rate">
+        <br>
+        <label for="duration">Duration:</label>
+        <input type="text" id="duration" name="duration">
+        <br>
+        <button>Click me</button>
+    </form>
+    <p id="result"></p>
+    <!-- <button>Click me</button> -->
     <script src="script.js"></script>
 </body>
 </html>
