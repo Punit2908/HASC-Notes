@@ -1,69 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body{
-            /* background-color: black; */
-            min-height: 90vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            background-color: cornflowerblue;
-        }
-        .container{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 20px;
-        }
-        .top{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            /* background-color: red; */
-        }
-        .bottom{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-        }
-        .red{
-            width: 150px;
-            height: 150px;
-            border-radius: 150%;
-            background-color: red;
-        }
-        .blue{
-            width: 150px;
-            height: 150px;
-            border-radius: 150%;
-            background-color: blue;
-        }
-        .green{
-            width: 150px;
-            height: 150px;
-            border-radius: 150%;
-            background-color: green;
-        }
-        .yellow{
-            width: 150px;
-            height: 150px;
-            border-radius: 150%;
-            background-color: yellow;
-        }
-        .flash{
-            background-color: #fff;
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 15px;
+            padding: 20px;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+
+            background: linear-gradient(135deg,
+                    #0f172a,
+                    #1e1b4b,
+                    #312e81);
+        }
+
+        /* Game heading */
+        h3 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #a5b4fc;
+            text-shadow: 0 0 20px #818cf8;
+        }
+
+        /* Instructions */
+        h2 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #cbd5e1;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        /* Main game board */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 14px;
+
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 25px;
+
+            background: rgba(255, 255, 255, 0.06);
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.35),
+                inset 0 0 20px rgba(255, 255, 255, 0.03);
+
+            backdrop-filter: blur(12px);
+        }
+
+        /* Top and bottom rows */
+        .top,
+        .bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+        }
+
+        /* Common button style */
+        .btn {
+            width: 145px;
+            height: 145px;
+            border-radius: 25px;
+            border: 4px solid rgba(255, 255, 255, 0.8);
+
+            cursor: pointer;
+            transition:
+                transform 0.15s ease,
+                box-shadow 0.15s ease,
+                filter 0.15s ease;
+
+            box-shadow:
+                0 8px 0 rgba(0, 0, 0, 0.25),
+                0 12px 25px rgba(0, 0, 0, 0.2);
+
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
+
+        /* Individual colors */
+        .red {
+            background: linear-gradient(145deg, #fb7185, #dc2626);
+        }
+
+        .blue {
+            background: linear-gradient(145deg, #60a5fa, #2563eb);
+        }
+
+        .green {
+            background: linear-gradient(145deg, #4ade80, #16a34a);
+        }
+
+        .yellow {
+            background: linear-gradient(145deg, #fde047, #eab308);
+        }
+
+        /* Hover effect */
+        .btn:hover {
+            filter: brightness(1.15);
+            transform: translateY(-3px);
+            box-shadow:
+                0 11px 0 rgba(0, 0, 0, 0.2),
+                0 16px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Click effect */
+        .btn:active {
+            transform: scale(0.94);
+        }
+
+        /* Simon sequence flash */
+        .flash {
+            background: #ffffff !important;
+            filter: brightness(1.8);
+            box-shadow:
+                0 0 20px #ffffff,
+                0 0 45px rgba(255, 255, 255, 0.9);
+            transform: scale(0.96);
+        }
+
+        /* User-click flash */
+        .userflash {
+            filter: brightness(1.5);
+            box-shadow: 0 0 25px currentColor;
+            transform: scale(0.95);
+        }
+
+        /* Score display */
+        .score {
+            min-width: 150px;
+            min-height: 45px;
+            margin-top: 10px;
+            padding: 8px 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+
+            background: rgba(255, 255, 255, 0.08);
+            color: #f8fafc;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .error{
+            background: red !important;
+        }
+        /* Responsive design for mobile */
+        @media (max-width: 480px) {
+            body {
+                gap: 12px;
+                padding: 15px;
+            }
+
+            h3 {
+                font-size: 1.7rem;
+            }
+
+            h2 {
+                font-size: 0.9rem;
+            }
+
+            .container {
+                gap: 10px;
+                padding: 15px;
+                border-radius: 20px;
+            }
+
+            .top,
+            .bottom {
+                gap: 10px;
+            }
+
+            .btn {
+                width: min(35vw, 125px);
+                height: min(35vw, 125px);
+                border-radius: 20px;
+                border-width: 3px;
+            }
+        }
+
+        /* Respect reduced-motion preference */
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
     </style>
     <title>Document</title>
 </head>
+
 <body>
     <h3>Simon Says</h3>
     <h2>Press any key to start</h2>
@@ -80,4 +235,5 @@
     <div class="score"></div>
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,62 @@
+div{
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to right, red, blue);
+    /* animation: rotate 3s linear infinite; */
+}
+
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(10deg);
+    }
+    20%{
+        transform: rotate(40deg);
+    }
+    30%{
+        transform: rotate(90deg);
+    }
+    40%{
+        transform: rotate(120deg);
+    }
+    50%{
+        transform: rotate(150deg);
+    }
+    60%{
+        transform: rotate(180deg);
+    }
+    70%{
+        transform: rotate(210deg);
+    }
+    80%{
+        transform: rotate(240deg);
+    }
+    90%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@media (width<500px) and (width>=400px){
+    div{
+        height: 200px;
+        width: 200px;
+    }
+}
+@media (width<400px){
+    div{
+        height: 300px;
+        width: 300px;
+    }
+}
