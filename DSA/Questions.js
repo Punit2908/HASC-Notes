@@ -121,4 +121,80 @@ function rotateString(s,k) {
     }
     return ans
 }
-console.log(rotateString("VANSHIKA",2))
+// console.log(rotateString("VANSHIKA",2))
+
+//Anagram Strings
+
+function AnaragramString(str1, str2){
+    if(str1.length != str2.length){
+        return false
+    }
+    return str1.split("").sort().join("") == str2.split("").sort().join("")
+}
+
+// console.log(AnaragramString("listen","silent"))
+
+//linear search
+
+function linearSearch(arr, target){
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] === target){
+            return i
+        }
+    }
+    console.log("not found")
+}
+
+// console.log(linearSearch([1,2,3,4,5,6,7,8,9,10],5))
+
+//Maximum consicutive ones
+function consicutiveOnes(arr){
+    let count = 0
+    let max = 0
+    arr.forEach(el=>{
+        if(el === 1){
+            count++
+            max = Math.max(count,max)
+        }else{
+            count = 0
+        }
+    })
+    return max
+}
+// console.log(consicutiveOnes([1,1,3,4,5,1,1,1,1,1,45,2,1]))
+
+//Move zeros to end
+function MoveZeroes(arr){
+    let j = 1;
+    for(let i = 0; i < arr.length; i++){
+        if(j>=arr.length) {
+            return arr
+        }
+        if(arr[i] == 0){
+            if(arr[j]!=0){
+                let temp = arr[i] 
+                arr[i] = arr[j]
+                arr[j] = temp
+            }else{
+                i--
+            }
+        }
+        j++
+    }
+    return arr
+}
+// console.log(MoveZeroes([1,2,0,4,0,0,7,8,0,10]))
+
+//Remove duplicates from sorted array
+
+function removeDuplicates(arr){
+    for(let i=0; i<arr.length; i++){
+        if(arr[i]==arr[i+1]){
+            arr.splice(i,1)
+            i--
+        }
+    }
+    
+    return arr
+}
+console.log(removeDuplicates([1,2,2,5,5,6,7,7,7,10]))
