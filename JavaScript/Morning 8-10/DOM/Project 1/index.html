@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(240, 240, 240);
+            font-family: Arial, Helvetica, sans-serif;
+            flex-direction: column;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input{
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        button{
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+        label{
+            font-size: 20px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Todo List</h1>
+    <form action="submit">
+        <label for="name">Enter the task</label>
+        <input type="text" id="name" name="name">
+        <label for="date">Enter the date</label>
+        <input type="datetime-local" id="date" name="date">
+        <button type="submit">Add</button>
+    </form>
+    <div id="list"></div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -25,7 +25,7 @@ export default function App() {
       </Greet> */}
       {/* <Hello  img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYt9JKA69soScWphBshpbjQUcw-8Ytcatv24oiDhSNHg&s=10"/> */}
         <ArrayState />
-        <Product />
+        {/* <Product /> */}
     </div>
   )
 }
