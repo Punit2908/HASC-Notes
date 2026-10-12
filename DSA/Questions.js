@@ -1,3 +1,68 @@
+//count all digits in the number
+function countDigits(num){
+    let count = 0;
+    while(num>0){
+        num = Math.floor(num/10);
+        count++;
+    }
+    return count;
+}
+// console.log(countDigits(13435))
+
+//count of odd digits in the number
+function countOdd(num){
+    let count = 0;
+    while(num>0){
+        let rem = num%10;
+        if(rem%2!=0) count++;
+        num = Math.floor(num/10);
+    }
+    return count;
+}
+// console.log(countOdd(1343581))
+
+//Reverse a number
+function reverseNumber(num){
+    let rev = 0;
+    while(num>0){
+        let rem = num%10;
+        rev = rev*10 + rem;
+        num = Math.floor(num/10);
+    }
+    return rev;
+}
+// console.log(reverseNumber(123456789))
+
+//palindrome number
+function isPalindrome(num){
+    let rev = reverseNumber(num);
+    if(rev==num) return true;
+    else return false;
+}
+// console.log(isPalindrome(1212))
+
+//check palindrom string
+function isPalindromeString(str){
+    let j = str.length-1;
+    for(let i=0; i<str.length/2; i++){
+        if(str[i]!=str[j]) return false;
+        j--;
+    }
+    return true;
+}
+// console.log(isPalindromeString("radara"))
+
+//maximun number in number
+function max(num){
+    let max = 0;
+    while(num>0){
+        let rem = num%10;
+        if(rem>max) max = rem;
+        num = Math.floor(num/10);
+    }
+    return max;
+}
+// console.log(max(1324975))
 // reverse a string
 function reverseString(str) {
     let reversedString = "";
