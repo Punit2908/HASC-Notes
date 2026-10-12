@@ -1,10 +1,17 @@
-import Greet from "./Components/Greet";
-// import "./App.css"
-import { IoHomeOutline } from "react-icons/io5";
-import Product from "./Components/Product";
-import ArrayState from "./Components/ArrayState";
+// import Greet from "./Components/Greet";
+// // import "./App.css"
+// import { IoHomeOutline } from "react-icons/io5";
+// import Product from "./Components/Product";
+// import ArrayState from "./Components/ArrayState";
 // const Hello = ({img}) =>{
 //   return <img src={img}/>
+
+import Counter from "./Components/Counter";
+import UseState from "./Hooks/UseState";
+import UseState2 from "./Hooks/UseState2";
+
+
+
 // }
 export default function App() {
   // const style = {
@@ -24,8 +31,11 @@ export default function App() {
         <p>This is another paragraph</p>
       </Greet> */}
       {/* <Hello  img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYt9JKA69soScWphBshpbjQUcw-8Ytcatv24oiDhSNHg&s=10"/> */}
-        <ArrayState />
+        {/* <ArrayState /> */}
         {/* <Product /> */}
+        {/* <UseState /> */}
+        <Counter />
+        {/* <UseState2 /> */}
     </div>
   )
 }
