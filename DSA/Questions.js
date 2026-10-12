@@ -197,4 +197,77 @@ function removeDuplicates(arr){
     
     return arr
 }
-console.log(removeDuplicates([1,2,2,5,5,6,7,7,7,10]))
+// console.log(removeDuplicates([1,2,2,5,5,6,7,7,7,10]))
+
+//Majority Element
+function majorityElement(arr){
+    // let count = {}
+    // arr.forEach(el=>{
+    //     if(count[el]){
+    //         count[el]++
+    //     }else{
+    //         count[el] = 1
+    //     }
+    // })
+    // let max = 0
+    // for(let key in count){
+    //     if(count[key]>max){
+    //         max = count[key]
+    //     }
+    // }
+    // let targetValue = max
+    // const maxvalue = Object.keys(count).filter(key => count[key] === targetValue)
+    // if(max > arr.length/2){
+    //     return maxvalue[0]
+    // }else{
+    //     return 0
+    // }
+    let curMaj = null
+    let majCnt = 0
+
+    for (const n of arr) {
+        if (curMaj === null || majCnt === 0) {
+            curMaj = n
+        }
+
+        if (n === curMaj) {
+            majCnt++
+        } else {
+            majCnt--
+        }
+    }
+
+    return curMaj
+}
+// console.log(majorityElement([1,1,1,1,2,3,4,5,6]))
+// Leaders in an Array
+function leaders(arr){
+    // let ans = []
+    // for(let i=0; i<arr.length; i++){
+    //     let j=i+1;
+    //     while(j<arr.length){
+    //         // console.log(arr[j])
+    //         if(arr[j]>arr[i]){
+    //             break;
+    //         }
+    //         j++;
+    //     }
+    //     if(j==arr.length){
+    //         ans.push(arr[i]);
+    //     }
+    //     j=i+1;
+    // }
+    // return ans
+    let ans = [arr[arr.length-1]]
+    let max = arr[arr.length-1]
+    for(let i=arr.length-1; i>=0; i--){
+        
+        if(arr[i]>max){
+            ans.push(arr[i])
+            max = arr[i]
+        }
+    }
+    return ans.reverse()
+}
+console.log(leaders([1,7,5,2,3,4,6]))
+
