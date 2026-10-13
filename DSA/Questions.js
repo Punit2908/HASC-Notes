@@ -334,5 +334,62 @@ function leaders(arr){
     }
     return ans.reverse()
 }
-console.log(leaders([1,7,5,2,3,4,6]))
+// console.log(leaders([1,7,5,2,3,4,6]))
+
+//Rearrange the array in alternating positive and negative items
+
+function rearrangeArray(arr){
+    // Method 1
+    let pos = []
+    let neg = []
+    arr.forEach(el=>{
+        if(el>0){
+            pos.push(el)
+        }
+        else{
+            neg.push(el)
+        }
+    })
+    arr = []
+    for(let i=0; i<pos.length; i++){
+        arr.push(pos[i])
+        arr.push(neg[i])
+    }
+    return arr
+    // Method 2
+
+}
+// console.log(rearrangeArray([1,2,3,4,5,-1,-2,-3,-4,-5]))
+
+//Print the array in spiral form
+function spiralArray(arr){
+    let row = arr.length
+    let col = arr[0].length
+
+    let startRow = 0
+    let startCol = 0
+    let endRow = row-1
+    let endCol = col-1
+
+    while(startRow<=endRow && startCol<=endCol){
+        for(let i= startCol; i<=endCol; i++){
+            console.log(arr[startRow][i])
+        }
+        startRow++
+        for(let i= startRow; i<=endRow; i++){
+            console.log(arr[i][endCol])
+        }
+        endCol--
+        for(let i= endCol; i>=startCol; i--){
+            console.log(arr[endRow][i])
+        }
+        endRow--
+        for(let i= endRow; i>=startRow; i--){
+            console.log(arr[i][startCol])
+        }
+        startCol++
+    }        
+}
+// spiralArray([[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20]])
+
 

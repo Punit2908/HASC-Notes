@@ -38,5 +38,33 @@
             <td>English</td>
         </tr>
     </table>
+
+    <form action="submit">
+        <br>
+        <br>
+        <label for="name">Name</label>
+         <!-- <div>Name</div> -->
+        <input type="text" placeholder="Name" id="name" name="name">
+        <br>
+        <label for="roll">Roll No.</label>
+        <input type="number" placeholder="Roll No" id="roll" min="1" max="100" name="roll">
+        <br>
+        <input type="password" placeholder="Password" id="password" name="password">
+        <br>
+        <div>Subject</div>
+        <label for="maths">Maths</label>
+        <input type="checkbox" id="maths" name="maths">
+        <label for="english">English</label>
+        <input type="checkbox" id="english" name="english">
+        <br>
+        <div>Gender</div>
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender">
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender">
+        <label for="others">Others</label>
+        <input type="radio" id="others" name="gender">
+        <button>Submit</button>
+    </form>
 </body>
 </html>
