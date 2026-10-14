@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
 }
@@ -34,10 +34,10 @@ div{
     border: 2px solid red;
     border-radius: 50%;
     transition: all 1s ease;
-}
-.box:hover{
+} */
+/* .box:hover{
     background-color: blue;
-    border: 2px solid black;
+    border: 2px solid black; */
     /* visibility: hidden; */
     /* display: none; */
     /* opacity: 0; */
@@ -46,7 +46,17 @@ div{
     /* transform: rotate(45deg); */
     /* transform: scale(0.7); */
     /* transform: skew(-20deg) */
-    transform: translate(10px,10px) rotate(45deg) scale(0.7) skew(-20deg);
-}
+    /* transform: translate(10px,10px) rotate(45deg) scale(0.7) skew(-20deg);
+} */
 
 /* 5 boxes - each box 1 transform property */
+body{
+    background: linear-gradient(grey,black) no-repeat;
+}
+.container{
+    height: 500px;
+    width: 500px;
+    /* background: linear-gradient(to bottom left,red,yellow,green,blue,purple 50%); */
+    /* background: radial-gradient(ellipse at top right,red 10%,yellow,green,blue,purple 80%); */
+    background: url("./download.jpeg") no-repeat center/cover;
+}

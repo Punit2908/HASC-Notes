@@ -128,3 +128,99 @@ function reverseArray(arr){
     return arr
 }
 // console.log(reverseArray([1,2,3,4,5]))
+
+//strings questions
+
+//largest odd number in a string
+//"12345597512"
+function largestOdd(str){
+    let num = 0
+    let max = 0
+    for(let i=0; i<str.length; i++){
+        if(Number(str[i])%2==1){
+            num = Number(str[i])
+            max = Math.max(num,max)
+        }
+    }
+    return max
+}
+// console.log(largestOdd("1873451789123"))
+
+//largest common prefix
+function largestCommonPrefix(arr){
+    let ans = ""
+    // let temp = []
+    // temp = arr.map(el=>el.length)
+    // let min = Math.min(...temp)
+
+    let i=0
+    let word = arr[0]
+    while(i<arr[0].length){
+        let letter = word[i]
+        for(let j=1; j<arr.length; j++){
+            if(arr[j][i]!=letter){
+                return ans
+            }
+        }
+        ans+=letter
+        i++
+    }
+    return ans 
+}
+// console.log(largestCommonPrefix(["Batman","Bat","Bahadur","B"]))
+
+//isomorphic strings
+function isIsomorphic(str1,str2){
+    if(str1.length!=str2.length) return false
+    let dif = str1.charCodeAt(0)-str2.charCodeAt(0)
+    for(let i=1; i<str1.length; i++){
+        if(str1.charCodeAt(i)-str2.charCodeAt(i)!=dif) return false
+    }
+    return true
+}
+// console.log(isIsomorphic('eat','iex'))
+
+//rotate string
+function rotateStr(str,k){
+    let ans = ""
+    for(let i=str.length-k; i<str.length; i++){
+        console.log(str[i])
+        ans+=str[i]
+    }
+    for(let i=0; i<=k; i++){
+        ans+=str[i]
+    }
+    return ans
+}
+// console.log(rotateStr("Anmol",2))
+//anagrams
+
+function anagrams(str1,str2){
+    if(str1.length!=str2.length) return false
+
+    str1 = str1.split("").sort()
+    str2 = str2.split("").sort()
+    for(let i=0; i<str1.length; i++){
+        if(str1[i]!=str2[i]) return false
+    }
+    return true
+}
+// console.log(anagrams("dog","goD"))
+
+//frequecy sort
+function frequencySort(str){
+    let arr = str.split("")
+    let freq = {}
+    for(let i=0; i<arr.length; i++){
+        if(!freq[arr[i]]){
+            freq[arr[i]] = 1
+        }
+        else{
+            freq[arr[i]]++
+        }
+    }
+    arr = []
+    arr = Object.keys(freq).sort((a,b)=>freq[b]-freq[a] || a.charCodeAt(0)-b.charCodeAt(0))
+    return arr
+}
+console.log(frequencySort("raaajj"))
