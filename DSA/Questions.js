@@ -392,4 +392,20 @@ function spiralArray(arr){
 }
 // spiralArray([[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20]])
 
+//isomorphic string
+function isIsomorphic(s, t) {
+    if(s.length != t.length){
+        return false
+    }
+    let diff = s.charCodeAt(0) - t.charCodeAt(0)
+    for(let i=1; i<s.length; i++){
+        if(s.charCodeAt(i) - t.charCodeAt(i) != diff){
+            return false
+        }
+    }
+    return true
+}
+// console.log(isIsomorphic("dog","fqi"))
+
+//Frequency sort
 
