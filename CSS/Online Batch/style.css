@@ -50,13 +50,28 @@ div{
 } */
 
 /* 5 boxes - each box 1 transform property */
-body{
+/* body{
     background: linear-gradient(grey,black) no-repeat;
-}
+} */
 .container{
-    height: 500px;
-    width: 500px;
+    height: 100px;
+    /* width: 200px; */
     /* background: linear-gradient(to bottom left,red,yellow,green,blue,purple 50%); */
     /* background: radial-gradient(ellipse at top right,red 10%,yellow,green,blue,purple 80%); */
-    background: url("./download.jpeg") no-repeat center/cover;
+    /* background: url("./download.jpeg") no-repeat center/cover; */
+    background-color: black;
+    color: white;
+    /* display:inline-block; */
+    /* position: absolute; */
+    /* top: 100px;
+    left: 100px; */
+    position: sticky;
+    top: 10px;
+    /* z-index: -100; */
+}
+
+.body{
+    background-color: lightblue;
+    height: 2000px;
+
 }
