@@ -1,3 +1,43 @@
 {
     "reactSnippets.settings.importReactOnTop": false,
+
+    // === IntelliSense / Auto-completion ===
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": true
+    },
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.acceptSuggestionOnCommitCharacter": true,
+    "editor.wordBasedSuggestions": "matchingDocuments",
+    "editor.parameterHints.enabled": true,
+    "editor.snippetSuggestions": "top",
+
+    // === JavaScript / TypeScript Auto-imports ===
+    "javascript.suggest.autoImports": true,
+    "javascript.suggest.completeFunctionCalls": true,
+    "javascript.suggest.names": true,
+    "javascript.suggest.paths": true,
+
+    // === Emmet for HTML/CSS ===
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "html": "html"
+    },
+
+    // === Suggest widget ===
+    "editor.suggest.fontSize": 14,
+    "editor.suggest.lineHeight": 1.5,
+    "editor.suggest.selection": "first",
+    "editor.suggest.showIcons": true,
+    "editor.suggest.showWords": true,
+    "editor.suggest.showStatusBar": true,
+
+    // === Inline suggestions (GitHub Copilot style, native VS Code) ===
+    "editor.inlineSuggest.enabled": true,
+
+    // === Bracket pair colorization ===
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true
 }
