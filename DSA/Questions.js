@@ -1,3 +1,12 @@
+//swap
+
+const swap = (num1, num2) => {
+  let temp = num1;
+  num1 = num2;
+  num2 = temp;
+  return num1, num2;
+};
+
 //count all digits in the number
 function countDigits(num) {
   let count = 0;
@@ -462,13 +471,15 @@ function threeSum(nums) {
     }
 
     while (left < right) {
-
-      if (nums[left] + nums[right] == -nums[i] && !ans.some(
-      triplet =>
-        triplet[0] === nums[i] &&
-        triplet[1] === nums[left] &&
-        triplet[2] === nums[right]
-    )) {
+      if (
+        nums[left] + nums[right] == -nums[i] &&
+        !ans.some(
+          (triplet) =>
+            triplet[0] === nums[i] &&
+            triplet[1] === nums[left] &&
+            triplet[2] === nums[right],
+        )
+      ) {
         ans.push([nums[i], nums[left], nums[right]]);
         left++;
         right--;
@@ -477,7 +488,6 @@ function threeSum(nums) {
       } else {
         left++;
       }
-
     }
     i++;
     left = i + 1;
@@ -486,4 +496,75 @@ function threeSum(nums) {
 
   return ans;
 }
-console.log(threeSum([1,2,0,1,0,0,0,0]));
+// console.log(threeSum([1,2,0,1,0,0,0,0]));
+
+// Sort an array if 0,1 and 2s
+
+function sortThree(arr) {
+  let start = 0,
+    left = 0,
+    right = arr.length - 1;
+
+  while (start <= right) {
+    if (arr[start] === 0) {
+      let temp = arr[left];
+      arr[left] = arr[start];
+      arr[start] = temp;
+      start++;
+      left++;
+    } else if (arr[start] === 1) {
+      start++;
+    } else if (arr[start] === 2) {
+      let temp = arr[right];
+      arr[right] = arr[start];
+      arr[start] = temp;
+      right--;
+    }
+  }
+  return arr;
+}
+
+// console.log(sortThree([1, 1, 0, 0, 2, 1]));
+
+//maximum subarray sum
+
+function maxSubArraySum(arr) {
+  // let max = arr.reduce((acc,el)=>{
+  //   return acc + el
+  // },0)
+
+  // for(let i=0; i<arr.length; i++){
+  //   for(let j=i; j<arr.length; j++){
+  //     let sum = arr.slice(i,j+1).reduce((acc,el)=>{
+  //       return acc + el
+  //     },0)
+  //     max = Math.max(max, sum)
+  //   }
+  // }
+  // return max
+  //Kadane's Algorithm
+  let sum = arr[0], max = arr[0];
+  // console.log(arr.reduce((acc,el)=>{return acc+el},0))
+  for(let i=1; i<arr.length; i++){
+    sum = Math.max(arr[i], sum+arr[i])
+    max = Math.max(max, sum)
+  }
+  return max
+
+  //Mehtod 3
+  // let max = nums[0]
+  //   let sum = nums[0]
+  //   for (let i = 1; i < nums.length; i++) {
+  //       if (nums[i] < nums[i] + sum) {
+  //           sum = nums[i] + sum
+  //       }
+  //       else {
+  //           sum = nums[i] 
+  //       }
+  //       if (max < sum) {
+  //           max = sum
+  //       }
+  //   }
+  //   return max;
+}
+console.log(maxSubArraySum([-2,1,-3,4,-1,2,1,-5,4]))

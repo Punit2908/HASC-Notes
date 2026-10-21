@@ -4,6 +4,7 @@ import FAQ from './Components/FAQ'
 import ProfileBuilder from './Components/ProfileBuilder'
 import RandomColor from './Components/RandomColor'
 import ThemeToggle from './Components/ThemeToggle'
+import Todo from './Todo/Todo'
 
 
 const App = () => {
@@ -13,7 +14,8 @@ const App = () => {
       {/* <ThemeToggle /> */}
       {/* <ProfileBuilder /> */}
       {/* <RandomColor /> */}
-      <FAQ />
+      {/* <FAQ /> */}
+      <Todo />
     </div>
   )
 }
