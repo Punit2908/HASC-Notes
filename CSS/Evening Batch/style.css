@@ -1,62 +1,26 @@
-div{
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to right, red, blue);
-    /* animation: rotate 3s linear infinite; */
+* {
+  color: red;
 }
-
-
-@keyframes rotate{
-    from{
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(360deg);
-    }
-    0%{
-        transform: rotate(0deg);
-    }
-    10%{
-        transform: rotate(10deg);
-    }
-    20%{
-        transform: rotate(40deg);
-    }
-    30%{
-        transform: rotate(90deg);
-    }
-    40%{
-        transform: rotate(120deg);
-    }
-    50%{
-        transform: rotate(150deg);
-    }
-    60%{
-        transform: rotate(180deg);
-    }
-    70%{
-        transform: rotate(210deg);
-    }
-    80%{
-        transform: rotate(240deg);
-    }
-    90%{
-        transform: rotate(270deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
+div {
+  color: rgb(221, 194, 221);
+  background-color: black;
+  font-size: 20px;
+  padding: 10px;
+  border: 2px solid yellow;
 }
-
-@media (width<500px) and (width>=400px){
-    div{
-        height: 200px;
-        width: 200px;
-    }
+.hero {
+  color: purple;
+  background-color: black;
+  font-size: 20px;
 }
-@media (width<400px){
-    div{
-        height: 300px;
-        width: 300px;
-    }
+#villian {
+  color: rgb(55, 52, 95);
+  background-color: black;
+}
+div p {
+  color: yellow;
+  background-color: black;
+}
+div div p {
+  color: aqua;
 }
