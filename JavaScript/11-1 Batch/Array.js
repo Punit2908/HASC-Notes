@@ -1,70 +1,115 @@
-let arr = [1,2,3,4,5,6,7,8,9,10]
+// let arr = [1,2,3,4,5,6,7,8,9,10]
 
-let arr2 = [1,2,3,4,5,6,7,8,9,10]
-console.log(arr==arr2)  //false
-//array kabhi value ke basis pe compare nahi hota hai, ye reference ke basis pe compare hota hai
-//Refrence or address store krta
+// let arr2 = [1,2,3,4,5,6,7,8,9,10]
+// console.log(arr==arr2)  //false
+// //array kabhi value ke basis pe compare nahi hota hai, ye reference ke basis pe compare hota hai
+// //Refrence or address store krta
 
-let arr3 = arr
-console.log(arr == arr3)  //true
-console.log(3 == '3') //true
-// == operator value ke basis pe compare krta hai, type ko ignore krta hai
-console.log(3 === '3') //false
-// === operator value ke basis pe compare krta hai, type ko bhi consider krta hai
-//array methods
+// let arr3 = arr
+// console.log(arr == arr3)  //true
+// console.log(3 == '3') //true
+// // == operator value ke basis pe compare krta hai, type ko ignore krta hai
+// console.log(3 === '3') //false
+// // === operator value ke basis pe compare krta hai, type ko bhi consider krta hai
+// //array methods
 
-console.log(arr.length)
-let arr4 = [...arr]
-arr[2] = 200
-console.log(arr)
-//spread operator
-console.log(arr4)
-let str = "Hello World"
-let arr5 = [...str]
-console.log(arr5)
+// console.log(arr.length)
+// let arr4 = [...arr]
+// arr[2] = 200
+// console.log(arr)
+// //spread operator
+// console.log(arr4)
+// let str = "Hello World"
+// let arr5 = [...str]
+// console.log(arr5)
 
-arr.push("Hello") //end me add krta hai
-console.log(arr)
-arr.unshift("Sharman") //start me add krta hai
-console.log(arr)
+// arr.push("Hello") //end me add krta hai
+// console.log(arr)
+// arr.unshift("Sharman") //start me add krta hai
+// console.log(arr)
 
-arr.pop() //end se remove krta hai
-console.log(arr)
-arr.shift() //start se remove krta hai
-console.log(arr)
+// arr.pop() //end se remove krta hai
+// console.log(arr)
+// arr.shift() //start se remove krta hai
+// console.log(arr)
 
+// //Objects
+// let obj =  {
+//     name: "Sharman",
+//     age: 25,
+//     address: {
+//         city: "Delhi",
+//         country: "India",
+//         pincode: 110001
+//     }
+// }
 
-//Objects
-let obj =  {
-    name: "Sharman",
-    age: 25,
-    address: {
-        city: "Delhi",
-        country: "India",
-        pincode: 110001
-    }
-}
+// console.log(obj)
+// console.log(obj.name)
+// console.log(obj.age)
+// console.log(obj.address)
+// obj.course = "Web Development"
+// obj.age = 19
+// console.log(obj)
+// console.log(obj.address.city)
 
-console.log(obj)
-console.log(obj.name)
-console.log(obj.age)
-console.log(obj.address)
-obj.course = "Web Development"
-obj.age = 19
-console.log(obj)
-console.log(obj.address.city)
+// //functions
 
-//functions
-
-// function add(a,b){
+// // function add(a,b){
+// //     return a+b
+// // }
+// //arrow function
+// const add =(a,b) =>{
 //     return a+b
 // }
-//arrow function
-const add =(a,b) =>{
-    return a+b
-}
 
+// let res = add(10,20)
+// console.log(res)
 
-let res = add(10,20)
-console.log(res)
+//Array methods...
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 5, 10];
 
+// console.log(arr.length)
+// console.log(arr[10])
+// console.log(arr.lastIndexOf(5))
+
+// console.log(arr.includes(11))
+// console.log(arr.slice(2,5))
+// console.log(arr.splice(2,4,"Hello","Sharman"))
+// console.log(arr)
+
+// for(let i=0; i<arr.length; i++){
+//     console.log(arr[i])
+// }
+// arr.forEach((el,idx, i) => {
+//     console.log(el+2,idx,i)
+//     return arr
+// });
+// console.log(result)
+
+// console.log(arr.map((el,idx)=>{
+//     // console.log(idx)
+//     return [el*2,idx]
+// }))
+
+// let names = ["Sharman","Batman","Superman","Spiderman"]
+
+// console.log(names.filter((el)=>{
+//     return el !== "Sharman"
+// }))
+
+// console.log(arr.filter((el)=>{
+//     return el<=5
+// }))
+
+// console.log(arr.some((el)=>{
+//     return el > 5
+// }))
+
+// console.log(arr.every((el)=>{
+//     return el > 0
+// }))
+
+console.log(arr.reduce((acc,el)=>{
+    return acc*=el
+},1))

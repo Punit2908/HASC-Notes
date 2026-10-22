@@ -86,3 +86,42 @@ let number = 9;
 //     default: console.log("Dono padh liya kr");
 // }
 
+let num = 12
+// if(num%2==0){
+//   console.log("Even")
+// }else{
+//   console.log("Odd")
+// }
+
+// if(num%3 == 0){
+//   console.log("Divisible by 3");
+// }
+// else{
+//   console.log("Not divisible")
+// }
+
+// if(num%2==0 || num%3==0 || num%5==0 || num%7==0 || num%11==0){
+//   console.log("Not prime")
+// }else{
+//   console.log("Prime")
+// }
+// let i = 1
+// while(i<=10){
+//   console.log(11*i)
+//   i++
+// }
+
+//for loops
+// let str = "Devanshu"
+// for(let i=0; i<str.length ; i++){
+//   console.log(str[i])
+// }
+
+// dowhile loops
+
+// let i=1
+// do{
+//   console.log(11*i)
+//   i++
+// }while(i<1)
+
