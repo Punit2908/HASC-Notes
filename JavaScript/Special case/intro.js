@@ -22,7 +22,7 @@
 
 //strings 
 
-let str = "Jashan"
+// let str = "Jashan"
 // console.log(name[6])
 
 // console.log(name.length)
@@ -48,4 +48,36 @@ let str = "Jashan"
 // console.log(str.trim())
 // console.log(str.slice(2,4))
 // console.log(str.split(""))
+
+// let name = 0/0 + "hello"
+// console.log(typeof(name),name)
+
+// booleans
+//false 0 true 1  
+// let bool = 1>2>1>0;
+// console.log(bool);
+
+//comparision operators
+
+// let a = 10
+// let b = "10"
+// console.log(a === b)
+
+// console.log("a".charCodeAt(0))
+// console.log("A".charCodeAt(0))
+
+// let a 
+// console.log(a)
+
+// let a = null
+// console.log(a)
+
+// let a = 0/0
+// console.log(a)
+
+// let a = -1/0
+// console.log(a)
+
+// let a = Symbol("a")
+// console.log(a)
 

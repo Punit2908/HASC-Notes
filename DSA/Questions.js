@@ -4,7 +4,7 @@ const swap = (num1, num2) => {
   let temp = num1;
   num1 = num2;
   num2 = temp;
-  return num1, num2;
+  return (num1, num2);
 };
 
 //count all digits in the number
@@ -436,67 +436,67 @@ function frequencySort(str) {
 
 // 3 sum
 function threeSum(nums) {
-  //   let ans = [];
-  //   let i = 0,
-  //     j = 0,
-  //     k = 0;
-  //     nums = nums.sort()
-  //   for (i = 0; i < nums.length - 2; i++) {
-  //     if (i > 0 && nums[i] === nums[i - 1]) continue;
-  //     for (j = i + 1; j < nums.length - 1; j++) {
-  //       if (j > i + 1 && nums[j] === nums[j - 1]) continue;
-  //       for (k = j + 1; k < nums.length; k++) {
-  //         if (k > j + 1 && nums[k] === nums[k - 1]) continue;
-  //         if ((nums[i] + nums[j] + nums[k] === 0)) {
-  //             ans.push([nums[i], nums[j], nums[k]]);
-
-  //           break;
-  //         }
-  //       }
-  //     }
-  //   }
-
-  //   return ans;
-
-  //Method 2
   let ans = [];
-  let i = 0;
-  let left = i + 1,
-    right = nums.length - 1;
+  let i = 0,
+    j = 0,
+    k = 0;
   nums = nums.sort();
-  while (i < nums.length - 2) {
-    if (i > 0 && nums[i] === nums[i - 1]) {
-      i++;
-      continue;
-    }
+  for (i = 0; i < nums.length - 2; i++) {
+    if (i > 0 && nums[i] === nums[i - 1]) continue;
+    for (j = i + 1; j < nums.length - 1; j++) {
+      if (j > i + 1 && nums[j] === nums[j - 1]) continue;
+      for (k = j + 1; k < nums.length; k++) {
+        if (k > j + 1 && nums[k] === nums[k - 1]) continue;
+        if (nums[i] + nums[j] + nums[k] === 0) {
+          ans.push([nums[i], nums[j], nums[k]]);
 
-    while (left < right) {
-      if (
-        nums[left] + nums[right] == -nums[i] &&
-        !ans.some(
-          (triplet) =>
-            triplet[0] === nums[i] &&
-            triplet[1] === nums[left] &&
-            triplet[2] === nums[right],
-        )
-      ) {
-        ans.push([nums[i], nums[left], nums[right]]);
-        left++;
-        right--;
-      } else if (nums[left] + nums[right] > -nums[i]) {
-        right--;
-      } else {
-        left++;
+          break;
+        }
       }
     }
-    i++;
-    left = i + 1;
-    right = nums.length - 1;
   }
 
   return ans;
+
+  //Method 2
+  // let ans = [];
+  // let i = 0;
+  // let left = i + 1,
+  //   right = nums.length - 1;
+  // nums = nums.sort();
+  // while (i < nums.length - 2) {
+  //   if (i > 0 && nums[i] === nums[i - 1]) {
+  //     i++;
+  //     continue;
+  //   }
+
+  //   while (left < right) {
+  //     if (
+  //       nums[left] + nums[right] == -nums[i] &&
+  //       !ans.some(
+  //         (triplet) =>
+  //           triplet[0] === nums[i] &&
+  //           triplet[1] === nums[left] &&
+  //           triplet[2] === nums[right],
+  //       )
+  //     ) {
+  //       ans.push([nums[i], nums[left], nums[right]]);
+  //       left++;
+  //       right--;
+  //     } else if (nums[left] + nums[right] > -nums[i]) {
+  //       right--;
+  //     } else {
+  //       left++;
+  //     }
+  //   }
+  //   i++;
+  //   left = i + 1;
+  //   right = nums.length - 1;
+  // }
+
+  // return ans;
 }
-// console.log(threeSum([1,2,0,1,0,0,0,0]));
+// console.log(threeSum([1,-2,0,1,0,0,0,0]));
 
 // Sort an array if 0,1 and 2s
 
@@ -543,13 +543,14 @@ function maxSubArraySum(arr) {
   // }
   // return max
   //Kadane's Algorithm
-  let sum = arr[0], max = arr[0];
+  let sum = arr[0],
+    max = arr[0];
   // console.log(arr.reduce((acc,el)=>{return acc+el},0))
-  for(let i=1; i<arr.length; i++){
-    sum = Math.max(arr[i], sum+arr[i])
-    max = Math.max(max, sum)
+  for (let i = 1; i < arr.length; i++) {
+    sum = Math.max(arr[i], sum + arr[i]);
+    max = Math.max(max, sum);
   }
-  return max
+  return max;
 
   //Mehtod 3
   // let max = nums[0]
@@ -559,7 +560,7 @@ function maxSubArraySum(arr) {
   //           sum = nums[i] + sum
   //       }
   //       else {
-  //           sum = nums[i] 
+  //           sum = nums[i]
   //       }
   //       if (max < sum) {
   //           max = sum
@@ -567,4 +568,4 @@ function maxSubArraySum(arr) {
   //   }
   //   return max;
 }
-console.log(maxSubArraySum([-2,1,-3,4,-1,2,1,-5,4]))
+// console.log(maxSubArraySum([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
