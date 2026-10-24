@@ -1,4 +1,5 @@
 
+import UseEffect from './UseEffect/UseEffect'
 import Counter from './Components/Counter'
 import FAQ from './Components/FAQ'
 import ProfileBuilder from './Components/ProfileBuilder'
@@ -15,7 +16,8 @@ const App = () => {
       {/* <ProfileBuilder /> */}
       {/* <RandomColor /> */}
       {/* <FAQ /> */}
-      <Todo />
+      {/* <Todo /> */}
+      {/* <UseEffect /> */}
     </div>
   )
 }

@@ -9,6 +9,7 @@
 import Counter from "./Components/Counter";
 import UseState from "./Hooks/UseState";
 import UseState2 from "./Hooks/UseState2";
+import UseEffect from "./UseEffect/UseEffect";
 
 
 
@@ -34,8 +35,9 @@ export default function App() {
         {/* <ArrayState /> */}
         {/* <Product /> */}
         {/* <UseState /> */}
-        <Counter />
+        {/* <Counter /> */}
         {/* <UseState2 /> */}
+        <UseEffect />
     </div>
   )
 }
