@@ -14,7 +14,7 @@
 //     console.log("You can't vote khushi")
 // }
 
-let number = 9;
+// let number = 9;
 // if(number>40){
 //     if(number>70 && number<80){
 //         console.log("You scored good")
@@ -125,3 +125,57 @@ let number = 9;
 //   i++
 // }while(i<1)
 
+
+
+//Objects
+
+// let obj = {
+//   name: "Devanshu",
+//   age: 17,
+// }
+
+// console.log(obj)
+// console.log(obj.name)
+// console.log(obj.age)
+
+// let obj2 = {
+//   name: "Devanshu",
+//   age: 17,
+//   address: {
+//     city: "Delhi",
+//     state: "Delhi",
+//     country: "India",
+//     pincode: 110001,
+//   }
+// }
+// console.log(obj2)
+// console.log(obj2.name)
+// console.log(obj2.address)
+// console.log(obj2.address.city)
+
+// let obj3 = {
+//   names: ["Devanshu", "Sonali", "Khushi"],
+//   ages: [17, 18, 19],
+// }
+
+// console.log(obj3)
+// console.log(obj3.names)
+// console.log(obj3.ages)
+
+
+//Arrays
+
+// let arr = [1,2,3,4,5,"Hello", true]
+// console.log(arr)
+// console.log(arr[0])
+// console.log(arr[5])
+
+// for(let i = 0; i<arr.length; i++){
+//   console.log(arr[i])
+// }
+
+// arr.push("Devanshu")
+// console.log(arr)
+
+// arr.pop()
+// console.log(arr)
