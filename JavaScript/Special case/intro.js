@@ -81,3 +81,38 @@
 // let a = Symbol("a")
 // console.log(a)
 
+//Local scope
+// {
+//   let a = 10 //Local scope
+//   console.log(a)
+// }
+// console.log(a)
+
+//Global scope
+// let a = 10 //Global scope
+// {
+//   let a = 9 //Local scope
+//   console.log(a)
+// }
+// console.log(a)
+
+//Math js
+// console.log(Math.PI)
+// Math.PI = 10
+// console.log(Math.PI)
+
+// console.log(Math.floor(-3.1)) // floor me lower number
+// console.log(Math.ceil(-43.4)) // ceil me higher number
+// console.log(Math.round(-3.6)) // round me number depend krta hai .5 se jyada to higher number else lower number
+
+// console.log(Math.random(Math.random()*5)+25)
+//37-43
+// console.log(Math.floor(Math.random()*7)+37)
+// console.log(Math.ceil(Math.random()*7)+36)
+// console.log(Math.round(Math.random()*6)+37)
+
+// -7 to -13
+
+console.log(Math.floor(Math.random()*7)-13)
+console.log(Math.ceil(Math.random()*7)-12)
+console.log(Math.round(Math.random()*6)-13)
