@@ -165,7 +165,7 @@
 
 //Arrays
 
-// let arr = [1,2,3,4,5,"Hello", true]
+let arr = [1,2,3,4,5,"Hello", true,1]
 // console.log(arr)
 // console.log(arr[0])
 // console.log(arr[5])
@@ -179,3 +179,33 @@
 
 // arr.pop()
 // console.log(arr)
+
+// arr.shift()
+// console.log(arr)
+
+// arr.unshift("Devanshu")
+// console.log(arr)
+
+// console.log(arr.length)
+// console.log(arr.includes("Devanshu"))
+
+// console.log(arr.indexOf("hello"))
+// console.log(arr.lastIndexOf(1))
+
+
+//Functions 
+// function sum (a,b){
+//   // console.log(a+b)
+//   return a+b
+// }
+
+// console.log(sum(21,22))
+// let result = sum(30,21)
+// console.log(result)
+// sum(34,56)
+
+const sum = (a,b,c,d) =>{
+  return a+b+c+d
+}
+
+console.log(sum(21,22,21,23))
