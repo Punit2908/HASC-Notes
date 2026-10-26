@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 25px;
+    background: linear-gradient(135deg, #0f172a, #312e81, #581c87);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Heading */
+h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow:
+        0 2px 0 #a5b4fc,
+        0 4px 0 #6366f1,
+        0 8px 15px rgba(0, 0, 0, 0.5);
+    animation: float 3s ease-in-out infinite;
+}
+
+/* 3D Quiz Card */
+.questionBank {
+    width: min(500px, 95vw);
+    min-height: 300px;
+    padding: 30px;
+    border-radius: 24px;
+    background: linear-gradient(145deg, #ffffff, #e0e7ff);
+    color: #1e1b4b;
+    box-shadow:
+        0 10px 0 #818cf8,
+        0 20px 0 #4338ca,
+        0 30px 40px rgba(0, 0, 0, 0.45),
+        inset 0 3px 8px rgba(255, 255, 255, 0.9);
+    transform: perspective(1000px) rotateX(3deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+
+/* Card Hover */
+.questionBank:hover {
+    transform: perspective(1000px) rotateX(0deg) translateY(-5px);
+    box-shadow:
+        0 12px 0 #818cf8,
+        0 22px 0 #4338ca,
+        0 35px 45px rgba(0, 0, 0, 0.5);
+}
+
+/* Question */
+.questionBank h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #312e81;
+}
+
+/* Answer Options */
+.questionBank div[id] {
+    position: relative;
+    padding: 12px 16px;
+    margin: 14px 0;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #eef2ff, #c7d2fe);
+    color: #312e81;
+    font-weight: 600;
+    border: 1px solid #a5b4fc;
+    cursor: pointer;
+    box-shadow:
+        0 5px 0 #818cf8,
+        0 8px 12px rgba(49, 46, 129, 0.15);
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+/* Answer Hover */
+.questionBank div[id]:hover {
+    transform: translateY(-3px) scale(1.02);
+    background: linear-gradient(145deg, #c4b5fd, #a5b4fc);
+    box-shadow:
+        0 8px 0 #6366f1,
+        0 12px 18px rgba(49, 46, 129, 0.25);
+}
+
+/* Answer Click */
+.questionBank div[id]:active {
+    transform: translateY(3px);
+    box-shadow:
+        0 2px 0 #6366f1,
+        0 4px 8px rgba(49, 46, 129, 0.2);
+}
+
+/* Start / Next / Submit Button */
+.startQuiz {
+    position: relative;
+    padding: 14px 38px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #f472b6, #c026d3);
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow:
+        0 7px 0 #86198f,
+        0 12px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+/* Button Hover */
+.startQuiz:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #ec4899, #a855f7);
+    box-shadow:
+        0 10px 0 #86198f,
+        0 16px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Button Click */
+.startQuiz:active {
+    transform: translateY(5px);
+    box-shadow:
+        0 2px 0 #86198f,
+        0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Floating Heading Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    body {
+        gap: 20px;
+        padding: 18px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .questionBank {
+        padding: 22px;
+        min-height: 280px;
+    }
+
+    .questionBank h3 {
+        font-size: 1.05rem;
+    }
+
+    .questionBank div[id] {
+        padding: 11px 13px;
+        font-size: 0.9rem;
+    }
+
+    .startQuiz {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+}
+
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <h2>Quiz App</h2>
+  <div class="questionBank">Click on start to begin the quiz</div>
+  <button class="startQuiz">Start</button>
+  <script src="script.js"></script>
+</body>
+</html>
