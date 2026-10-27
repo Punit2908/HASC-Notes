@@ -68,11 +68,12 @@ let questions = [
 let questionBank = document.querySelector(".questionBank");
 let startQuiz = document.querySelector(".startQuiz");
 let i = 0;
-let correct = 0, incorrect = 0;
-
+let correct = 0,
+  incorrect = 0;
+let selected = null
 function displayQuestions() {
-  if(i<0){
-    return
+  if (i < 0) {
+    return;
   }
   if (i == questions.length) {
     questionBank.innerHTML = `<h3>You have completed the quiz!</h3>
@@ -82,13 +83,13 @@ function displayQuestions() {
     return;
   }
   if (i == questions.length + 1) {
-    reset()
+    reset();
   }
   questionBank.innerHTML = `<h3>${questions[i].question}</h3>
-  <div id="a" onClick="check("a")">${questions[i].a}</div>
-  <div id="b" onClick="check("b")">${questions[i].b}</div>
-  <div id="c" onClick="check("c")">${questions[i].c}</div>
-  <div id="d" onClick="check("d")">${questions[i].d}</div>
+  <div id="a" onClick="check('a')" class="option">${questions[i].a}</div>
+  <div id="b" class="option" onClick="check('b')" >${questions[i].b}</div>
+  <div id="c" class="option" onClick="check('c')" >${questions[i].c}</div>
+  <div id="d" class="option" onClick="check('d')" >${questions[i].d}</div>
 
   `;
   startQuiz.innerHTML = `Next Question`;
@@ -99,23 +100,38 @@ function displayQuestions() {
 
 startQuiz.addEventListener("click", (e) => {
   displayQuestions();
-  console.log(i)
+  if(i!=0 && selected == null){
+    alert("Choose one before moving forward")
+    return
+  }
+  if(selected == questions[i].correct){
+    correct++;
+  }
+  else{
+    incorrect++;
+  }
+  selected = null
   i++;
 });
 
-const reset = () =>{
-  i=-1
-  correct=0
-  incorrect=0
-  questionBank.innerHTML = `Click on start to begin the quiz`
-  startQuiz.innerHTML = `Start`
+const reset = () => {
+  i = -1;
+  correct = 0;
+  incorrect = 0;
+  questionBank.innerHTML = `Click on start to begin the quiz`;
+  startQuiz.innerHTML = `Start`;
+};
+
+function check(ans) {
+  let a = document.querySelectorAll(`.option`);
+  console.log(a);
+
+  a.forEach((el) => {
+    el.classList.remove("selected");
+  });
+
+  document.querySelector(`#${ans}`).classList.add("selected");
+
+  selected = ans
 }
 
-function check(ans){
-  console.log("Hy")
-  if(questions[i].correct == ans){
-    correct++
-  }else{
-    incorrect++
-  }
-}
