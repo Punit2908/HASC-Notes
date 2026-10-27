@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
 /* * {
   color: red;
 }
@@ -26,10 +26,11 @@ div div p {
   color: aqua;
 } */
 
-*{
+* {
   margin: 0;
   padding: 0;
-  font-family: "Roboto Slab",sans, serif;
+  font-family: "Roboto Slab", sans, serif;
+  box-sizing: border-box;
 }
 /* 
 div{
@@ -37,37 +38,64 @@ div{
   background-color: black;
   /* height: 100px;
   width: 100px; */
-  /* min-height: 100px;
+/* min-height: 100px;
   min-width: 400px; */
 
-  /* margin: 20px;
+/* margin: 20px;
   padding: 20px; */
-  /* font-size: 40px; */
-  /* font-weight: 700; */
-  /* font-family: ; */
-  /* font-style: italic; */
-  
-  /* text-align: right; */
-  /* text-decoration: underline dashed white; */
-  /* text-decoration: line-through; */
-  /*text-transform: capitalize;
+/* font-size: 40px; */
+/* font-weight: 700; */
+/* font-family: ; */
+/* font-style: italic; */
+
+/* text-align: right; */
+/* text-decoration: underline dashed white; */
+/* text-decoration: line-through; */
+/*text-transform: capitalize;
   text-shadow: 12px 120px 3px rgb(91, 204, 104);
   letter-spacing: 1px;
   line-height: 38px;
   word-spacing: 20px;
 } */
 
-div{
-  /* color: rgb(150,100,255); */
-  /* color: #fff */
-  /* color: #c7d22df0; */
-  /* font-size: 1.5rem; */
-  font-size: 18px;
-  /* height: 40%; */
-  width: 60%;
-  /* border: 2px solid; */
-  /* display: inline; */
-}
-div p{
+/* div{ */
+/* color: rgb(150,100,255); */
+/* color: #fff */
+/* color: #c7d22df0; */
+/* font-size: 1.5rem; */
+/* font-size: 18px; */
+/* height: 40%; */
+/* width: 60%; */
+/* border: 2px solid; */
+/* display: inline; */
+/* } */
+/* div p{
   font-size: 1.1em;
+} */
+
+div {
+  color: blueviolet;
+  font-size: 1.4rem;
+  padding: 20px;
+  height: 500px;
+  width: 400px;
+  margin: 20px;
+  border: 2px dotted black;
+}
+
+div:hover {
+  color: red;
+  background-color: black;
+  /* font-size: 0.8rem; */
+  text-decoration: underline;
+  box-shadow: 2px 4px 2px rgb(214, 87, 87);
+}
+
+a {
+  color: greenyellow;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  text-decoration: underline;
 }

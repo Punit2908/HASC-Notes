@@ -204,8 +204,10 @@ let arr = [1,2,3,4,5,"Hello", true,1]
 // console.log(result)
 // sum(34,56)
 
-const sum = (a,b,c,d) =>{
-  return a+b+c+d
-}
+// const sum = (a,b,c,d) =>{
+//   return a+b+c+d
+// }
 
-console.log(sum(21,22,21,23))
+// console.log(sum(21,22,21,23))
+
+
