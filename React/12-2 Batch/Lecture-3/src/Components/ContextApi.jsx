@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import {Data,Data1} from "../App"
+// import {Data,Data1} from "../App"
 const ContextApi = () => {
   const name = useContext(Data)
   const age = useContext(Data1)
