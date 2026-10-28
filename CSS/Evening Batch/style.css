@@ -73,7 +73,7 @@ div{
   font-size: 1.1em;
 } */
 
-div {
+/* div {
   color: blueviolet;
   font-size: 1.4rem;
   padding: 20px;
@@ -86,7 +86,7 @@ div {
 div:hover {
   color: red;
   background-color: black;
-  /* font-size: 0.8rem; */
+  font-size: 0.8rem;
   text-decoration: underline;
   box-shadow: 2px 4px 2px rgb(214, 87, 87);
 }
@@ -98,4 +98,30 @@ a {
 a:hover {
   color: red;
   text-decoration: underline;
+} */
+
+.container{
+  /* height: 500px; */
+  border: 2px solid;
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 10px; */
+  /* flex-direction: column-reverse; */
+  justify-content: center;
+  /* justify-content: space-evenly; */
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  align-items: center;
+}
+.box{
+  /* display: inline-block; */
+  height: 200px;
+  width: 100px;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 50px;
+  opacity: 0.9;
+  /* visibility: hidden; */
+  /* display: none; */
+  /* border-bottom-right-radius: 10px; */
 }
