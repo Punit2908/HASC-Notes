@@ -70,11 +70,9 @@ let startQuiz = document.querySelector(".startQuiz");
 let i = 0;
 let correct = 0,
   incorrect = 0;
-let selected = null
+let selected = null;
 function displayQuestions() {
-  if (i < 0) {
-    return;
-  }
+
   if (i == questions.length) {
     questionBank.innerHTML = `<h3>You have completed the quiz!</h3>
     <div>Correct Answers: ${correct}</div><div>Incorrect Answers: ${incorrect}</div>
@@ -98,24 +96,40 @@ function displayQuestions() {
   }
 }
 
-startQuiz.addEventListener("click", (e) => {
-  displayQuestions();
-  if(i!=0 && selected == null){
-    alert("Choose one before moving forward")
-    return
+startQuiz.addEventListener("click", () => {
+  // Restart if quiz is completed
+  if (i >= questions.length) {
+    reset();
+    return;
   }
-  if(selected == questions[i].correct){
+
+  // First click starts the quiz
+  if (i === 0 && selected === null) {
+    displayQuestions();
+    return;
+  }
+
+  // Require an answer before moving forward
+  if (selected === null) {
+    alert("Choose one before moving forward");
+    return;
+  }
+
+  // Check answer
+  if (selected === questions[i].correct) {
     correct++;
-  }
-  else{
+  } else {
     incorrect++;
   }
-  selected = null
+
+  selected = null;
   i++;
+
+  displayQuestions();
 });
 
 const reset = () => {
-  i = -1;
+  i = 0;
   correct = 0;
   incorrect = 0;
   questionBank.innerHTML = `Click on start to begin the quiz`;
@@ -132,6 +146,5 @@ function check(ans) {
 
   document.querySelector(`#${ans}`).classList.add("selected");
 
-  selected = ans
+  selected = ans;
 }
-
