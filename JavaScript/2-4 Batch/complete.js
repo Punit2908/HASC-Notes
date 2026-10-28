@@ -165,7 +165,7 @@
 
 //Arrays
 
-let arr = [1,2,3,4,5,"Hello", true,1]
+// let arr = [1,2,3,4,5,"Hello", true,1]
 // console.log(arr)
 // console.log(arr[0])
 // console.log(arr[5])
@@ -210,4 +210,24 @@ let arr = [1,2,3,4,5,"Hello", true,1]
 
 // console.log(sum(21,22,21,23))
 
+//higher order functions
 
+// function greet(name){
+//   console.log("Hello how are you?",name)
+// }
+
+// function greetme(name){
+//   greet(name)
+// }
+
+// greetme("Devanshu")
+
+//iffe function
+// (()=>{
+//   console.log("Hello how are you?")
+// })()
+
+// function questions
+// write a function which takes 4 numbers and returns the maxium number
+// write a function which takes 4 numbers and returns the minimum number
+// write a function which takes 4 numbers and returns the average number

@@ -1,0 +1,18 @@
+/* div{
+  color: red;
+} */
+
+*{
+  color: red;
+  margin: 0;
+  padding: 0;
+}
+div{
+  color: blueviolet;
+  background-color: black;
+  height: 410px;
+  width: 200px;
+  margin: 40px 30px 20px 40px ;
+  padding: 40px 20px 30px 40px;
+  
+}
