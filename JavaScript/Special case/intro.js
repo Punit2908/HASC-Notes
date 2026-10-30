@@ -113,6 +113,18 @@
 
 // -7 to -13
 
-console.log(Math.floor(Math.random()*7)-13)
-console.log(Math.ceil(Math.random()*7)-12)
-console.log(Math.round(Math.random()*6)-13)
+// console.log(Math.floor(Math.random()*7)-13)
+// console.log(Math.ceil(Math.random()*7)-12)
+// console.log(Math.round(Math.random()*6)-13)
+
+// console.log(Math.max(1,2,4,5,221,134))
+// console.log(Math.min(1,2,4,5,221,134))
+
+// Objects
+
+// let num = 17
+// let str = `Hello I am batman I am ${num} years old`
+// console.log(str)
+
+//Key value pairs
+let data = {}

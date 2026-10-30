@@ -1,4 +1,3 @@
-
 import UseEffect from './UseEffect/UseEffect'
 import Counter from './Components/Counter'
 import FAQ from './Components/FAQ'
