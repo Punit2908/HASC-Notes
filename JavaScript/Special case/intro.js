@@ -127,4 +127,58 @@
 // console.log(str)
 
 //Key value pairs
-// let data = {}
+// let data = {
+//   name: "Batman",
+//   age: 23,
+//   // address: "Kaithal"
+//   address: {
+//     city: "Gotham",
+//     country: "USA",
+//     pincode: 101010
+//   }
+// }
+
+// console.log(data)
+// console.log(data["name"])
+// console.log(data.name)
+// console.log(data["age"])
+// console.log(data.age)
+// console.log(data["address"])
+// console.log(data.address)
+
+// console.log(data.address.city)
+
+// arrays
+const arr = [1,2,3,4,"Batman", true, 3>5]
+// console.log(arr[0])
+// for (let index = 0; index < arr.length; index++) {
+//   // const element = array[index];
+//   console.log(arr[index])  
+// }
+
+// arr[1] = "Helo"
+// console.log(arr)
+// const arr2 = [1,2,3,4,"Batman", true, 3>5]
+// const arr3 = arr // call by refrence  - deep copy
+// array holds instance of data not the actual data
+
+// let i = 10
+// let j = i  //call by value - shallow copy
+// j++
+// console.log(i,j)
+// arr3[3] = "Jashan"
+// console.log(arr, arr3)
+// console.log(arr == arr2)
+// console.log(arr == arr3)
+
+arr.shift()
+console.log(arr)
+
+arr.unshift("Hello bhai")
+console.log(arr)
+
+arr.pop()
+console.log(arr)
+
+arr.push(true)
+console.log(arr)
