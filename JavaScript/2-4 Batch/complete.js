@@ -231,3 +231,39 @@
 // write a function which takes 4 numbers and returns the maxium number
 // write a function which takes 4 numbers and returns the minimum number
 // write a function which takes 4 numbers and returns the average number
+
+
+//Array methods
+
+let arr = [1,2,3,4,5,6,7,8,9]
+let names = ["Devanshu","Sonali","Khushi"]
+// let result = arr.forEach((el)=>{
+//   console.log(el*4)
+//   return el
+// })
+// console.log(result)
+
+
+// let result = arr.map((el,index, array)=>{
+//   return [el*4,index,array]
+// })
+// console.log(result)
+
+// let result = arr.filter((el)=>{
+//   return el <= 5
+// })
+// console.log(result)
+
+// let result = arr.reduce((sum,el)=>{
+//   return sum*=el
+// },1)
+// console.log(result)
+
+// let result = arr.some((el)=>{
+//   return el>8
+// })
+// console.log(result)
+
+console.log(arr.every((el)=>{
+  return el>5
+}))

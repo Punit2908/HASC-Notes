@@ -569,3 +569,49 @@ function maxSubArraySum(arr) {
   //   return max;
 }
 // console.log(maxSubArraySum([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
+
+//Next Permutation of an array
+
+function nextPermutation(arr) {
+  let i = arr.length - 2;
+  // pivot
+  while (i >= 0 && arr[i + 1] <= arr[i]) {
+    i--;
+  }
+
+  //Point we need ti swap with
+  if (i >= 0) {
+    let j = arr.length - 1;
+    while (arr[j] <= arr[i]) {
+      j--;
+    }
+    let temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+  }
+
+  //sort the remaining part
+  let left = i + 1;
+  let right = arr.length - 1;
+  let newarr = arr.slice(left, right + 1).sort((a, b) => a - b);
+  arr.splice(left, right - left + 1, ...newarr);
+  return arr;
+}
+// console.log(nextPermutation([2, 1, 4, 2, 4, 5, 6]));
+
+// Majority Element III
+
+function majorityElement3(arr){
+  let obj = {}
+  for(let i=0; i<arr.length; i++){
+    if(obj[arr[i]]){
+      obj[arr[i]]++
+    }else{
+      obj[arr[i]] = 1
+    }
+  }
+  return Object.keys(obj).filter(el=>obj[el]>arr.length/3)
+}
+// console.log(majorityElement3([1,1,1,2,34,5,1]))
+
+
