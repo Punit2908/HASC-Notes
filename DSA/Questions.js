@@ -614,4 +614,30 @@ function majorityElement3(arr){
 }
 // console.log(majorityElement3([1,1,1,2,34,5,1]))
 
+// Count Inversion
+function countInversion(arr){
+  let count = 0;
+  for(let i=0; i<arr.length-1; i++){
+    for(let j = i+1; j<arr.length; j++){
+      if(arr[i]>arr[j]){
+        count++
+      }
+    }
+  }
+  return count
+}
+// console.log(countInversion([1,2,3,4,3,2,1]))
 
+//Merge Sorted Array
+function mergeSortedArray(nums1, m, nums2, n) {
+    nums1 = nums1.splice(0,m)
+    nums2 = nums2.splice(0,n)
+
+    // console.log(nums1, nums2)
+    for(let i = 0; i<nums2.length; i++){
+        nums1.push(nums2[i])
+    }
+
+    return nums1.sort()
+};
+console.log(mergeSortedArray([1,2,3,0,0,0],3,[2,5,6],3))
