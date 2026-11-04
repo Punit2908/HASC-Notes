@@ -11,13 +11,13 @@ const App = () => {
   const age = 23;
   return (
     <div>
-      <Example1 />
+      {/* <Example1 /> */}
       {/* <Props state={{ num, setNum }} /> */}
       {/* <Example2>
         <h2>Child 1</h2>
         <div>Hello</div>
       </Example2> */}
-      {/* <Todo /> */}
+      <Todo />
     </div>
   );
 };
