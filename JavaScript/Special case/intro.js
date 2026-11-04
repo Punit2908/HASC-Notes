@@ -149,7 +149,7 @@
 // console.log(data.address.city)
 
 // arrays
-const arr = [1,2,3,4,"Batman", true, 3>5]
+// const arr = [1,2,3,4,"Batman", true, 3>5]
 // console.log(arr[0])
 // for (let index = 0; index < arr.length; index++) {
 //   // const element = array[index];
@@ -171,14 +171,52 @@ const arr = [1,2,3,4,"Batman", true, 3>5]
 // console.log(arr == arr2)
 // console.log(arr == arr3)
 
-arr.shift()
-console.log(arr)
+// arr.shift()
+// console.log(arr)
 
-arr.unshift("Hello bhai")
-console.log(arr)
+// arr.unshift("Hello bhai")
+// console.log(arr)
 
-arr.pop()
-console.log(arr)
+// arr.pop()
+// console.log(arr)
 
-arr.push(true)
-console.log(arr)
+// arr.push(true)
+// console.log(arr)
+
+// functions
+
+// function add(a,b){
+//   // let a = 10
+//   // let b = 20
+//   console.log(a+b)
+// }
+
+// add(12,true)
+
+// function add(a,b){
+//   // a = 10
+//   // b = 21
+//   // console.log(a+b)
+//   return a+b
+// }
+// let result = add(10,11)
+// console.log(result)
+// console.log(add(11,12))
+
+// Arrow functions
+
+// function keyword ko phle use krte the ab ham arrow functions use kr skte hai
+
+// const add = (a,b,c,d) => {
+//   // console.log("Hello I am a add function")
+//   return a+b+c+d
+// }
+
+// add(11,22,33,44)
+// console.log(add(11,22,33,44))
+
+//  iffie functions
+// (function(){
+//   console.log("Hello I am an iffie function")
+// })()
+
