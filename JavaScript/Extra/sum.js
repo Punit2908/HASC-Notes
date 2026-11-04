@@ -6,3 +6,7 @@ console.log(sum(2,3))
 console.log(divide(2,3))
 console.log(multiply(2,3))
 console.log(substract(2,3))
+
+
+const asd = "12+32+32"
+console.log(eval(asd))

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: rgb(240, 240, 240);
+        font-family: Arial, Helvetica, sans-serif;
+        flex-direction: column;
+      }
+      .red {
+        background-color: red;
+      }
+      .green {
+        background-color: green;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .container {
+        display: flex;
+      }
+      .box {
+        height: 200px;
+        width: 200px;
+        margin: 10px;
+      }
+      .flash{
+        background-color: white;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Simon Says</h2>
+    <div class="container">
+      <div>
+        <div class="red box">1</div>
+        <div class="green box">2</div>
+      </div>
+      <div>
+        <div class="yellow box">3</div>
+        <div class="blue box">4</div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
