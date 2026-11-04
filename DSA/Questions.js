@@ -640,4 +640,50 @@ function mergeSortedArray(nums1, m, nums2, n) {
 
     return nums1.sort()
 };
-console.log(mergeSortedArray([1,2,3,0,0,0],3,[2,5,6],3))
+// console.log(mergeSortedArray([1,2,3,0,0,0],3,[2,5,6],3))
+
+//Maximum Product of subarray
+function maxProduct(arr){
+  let prod = arr[0]
+  let max = arr[0]
+  for(let i=1;i<arr.length;i++){
+    prod = Math.max(arr[i] ,arr[i-1] ,prod*arr[i])
+    max = Math.max(max , prod)
+  }
+  if(prod == 0){
+    prod = 1;
+  }
+  return max 
+}
+// console.log(maxProduct([-2,-3,0,4,5,6,-3,5]))
+
+//Reverse pairs
+function reversePairs(nums) {
+    let reverse = 0
+    for(let i=0; i<nums.length-1; i++){
+        for(let j=i+1; j<nums.length; j++){
+            if(nums[i]>(2*nums[j])){
+                reverse++
+            }
+        }
+    }
+    return reverse
+};
+// console.log(reversePairs([1,3,2,3,1]))
+// Binary Search
+function binarySearch(arr, target){
+  let low = arr[0]
+  let high = arr[arr.length-1]
+  while(low<=high){
+    let mid = Math.floor((low+high)/2)
+    if(arr[mid]==target){
+      return {index: mid, value: arr[mid]}
+    }else if(arr[mid]>target){
+      high = mid-1
+    }else{
+      low = mid+1
+    }
+  }
+  return -1
+}
+// console.log(binarySearch([1,2,3,4,5,6,7,8], 6))
