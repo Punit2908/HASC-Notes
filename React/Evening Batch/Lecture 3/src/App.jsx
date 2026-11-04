@@ -7,7 +7,7 @@ const App = () => {
   const age = 23;
   return (
     <div>
-      <Example1 name={name} age={age} />
+      {/* <Example1 name={name} age={age} /> */}
       {/* <Example2>
         <h2>Name: Batman</h2> 
         <h2>Age: 23</h2>

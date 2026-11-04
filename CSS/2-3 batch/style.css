@@ -2,17 +2,36 @@
   color: red;
 } */
 
-*{
+/* * {
   color: red;
   margin: 0;
   padding: 0;
 }
-div{
+div {
   color: blueviolet;
   background-color: black;
   height: 410px;
   width: 200px;
-  margin: 40px 30px 20px 40px ;
+  margin: 40px 30px 20px 40px;
   padding: 40px 20px 30px 40px;
+} */
+
+div{
+  height: 100px;
+  background-color: goldenrod;
+  /* overflow: scroll; */
+  /* font-family: sans-serif,'Courier New', Courier, monospace; */
+  font-size: 20px;
+  font-weight: 600;
+  font-style: oblique;
   
+  text-align: justify;
+  text-decoration: underline wavy red;
+  text-transform: capitalize;
+  text-shadow: -12px -12px 4px lightcoral;
+
+  line-height: 30px;
+  letter-spacing: 2px;
+  word-spacing: 23px;
+
 }
