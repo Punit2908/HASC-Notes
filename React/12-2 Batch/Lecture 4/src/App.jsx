@@ -19,7 +19,7 @@ const App = () => {
         <Profile2 />
       </ContextApi> */}
       {/* <Example3 /> */}
-      <UniqueId />
+      {/* <UniqueId /> */}
     </div>
   )
 }

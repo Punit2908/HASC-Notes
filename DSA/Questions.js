@@ -601,89 +601,111 @@ function nextPermutation(arr) {
 
 // Majority Element III
 
-function majorityElement3(arr){
-  let obj = {}
-  for(let i=0; i<arr.length; i++){
-    if(obj[arr[i]]){
-      obj[arr[i]]++
-    }else{
-      obj[arr[i]] = 1
+function majorityElement3(arr) {
+  let obj = {};
+  for (let i = 0; i < arr.length; i++) {
+    if (obj[arr[i]]) {
+      obj[arr[i]]++;
+    } else {
+      obj[arr[i]] = 1;
     }
   }
-  return Object.keys(obj).filter(el=>obj[el]>arr.length/3)
+  return Object.keys(obj).filter((el) => obj[el] > arr.length / 3);
 }
 // console.log(majorityElement3([1,1,1,2,34,5,1]))
 
 // Count Inversion
-function countInversion(arr){
+function countInversion(arr) {
   let count = 0;
-  for(let i=0; i<arr.length-1; i++){
-    for(let j = i+1; j<arr.length; j++){
-      if(arr[i]>arr[j]){
-        count++
+  for (let i = 0; i < arr.length - 1; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] > arr[j]) {
+        count++;
       }
     }
   }
-  return count
+  return count;
 }
 // console.log(countInversion([1,2,3,4,3,2,1]))
 
 //Merge Sorted Array
 function mergeSortedArray(nums1, m, nums2, n) {
-    nums1 = nums1.splice(0,m)
-    nums2 = nums2.splice(0,n)
+  nums1 = nums1.splice(0, m);
+  nums2 = nums2.splice(0, n);
 
-    // console.log(nums1, nums2)
-    for(let i = 0; i<nums2.length; i++){
-        nums1.push(nums2[i])
-    }
+  // console.log(nums1, nums2)
+  for (let i = 0; i < nums2.length; i++) {
+    nums1.push(nums2[i]);
+  }
 
-    return nums1.sort()
-};
+  return nums1.sort();
+}
 // console.log(mergeSortedArray([1,2,3,0,0,0],3,[2,5,6],3))
 
 //Maximum Product of subarray
-function maxProduct(arr){
-  let prod = arr[0]
-  let max = arr[0]
-  for(let i=1;i<arr.length;i++){
-    prod = Math.max(arr[i] ,arr[i-1] ,prod*arr[i])
-    max = Math.max(max , prod)
+function maxProduct(arr) {
+  let prod = arr[0];
+  let max = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    prod = Math.max(arr[i], arr[i - 1], prod * arr[i]);
+    max = Math.max(max, prod);
   }
-  if(prod == 0){
+  if (prod == 0) {
     prod = 1;
   }
-  return max 
+  return max;
 }
 // console.log(maxProduct([-2,-3,0,4,5,6,-3,5]))
 
 //Reverse pairs
 function reversePairs(nums) {
-    let reverse = 0
-    for(let i=0; i<nums.length-1; i++){
-        for(let j=i+1; j<nums.length; j++){
-            if(nums[i]>(2*nums[j])){
-                reverse++
-            }
-        }
-    }
-    return reverse
-};
-// console.log(reversePairs([1,3,2,3,1]))
-// Binary Search
-function binarySearch(arr, target){
-  let low = arr[0]
-  let high = arr[arr.length-1]
-  while(low<=high){
-    let mid = Math.floor((low+high)/2)
-    if(arr[mid]==target){
-      return {index: mid, value: arr[mid]}
-    }else if(arr[mid]>target){
-      high = mid-1
-    }else{
-      low = mid+1
+  let reverse = 0;
+  for (let i = 0; i < nums.length - 1; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] > 2 * nums[j]) {
+        reverse++;
+      }
     }
   }
-  return -1
+  return reverse;
+}
+// console.log(reversePairs([1,3,2,3,1]))
+// Binary Search
+function binarySearch(arr, target) {
+  let low = arr[0];
+  let high = arr[arr.length - 1];
+  while (low <= high) {
+    let mid = Math.floor((low + high) / 2);
+    if (arr[mid] == target) {
+      return { index: mid, value: arr[mid] };
+    } else if (arr[mid] > target) {
+      high = mid - 1;
+    } else {
+      low = mid + 1;
+    }
+  }
+  return -1;
 }
 // console.log(binarySearch([1,2,3,4,5,6,7,8], 6))
+
+//get ceil and floor values
+
+function getFloorAndCeil(arr, target) {
+  if (target > arr[arr.length - 1]) {
+    return [arr[arr.length - 1], -1];
+  }
+  if (target < arr[0]) {
+    return [-1, arr[0]];
+  }
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= target) {
+      if (arr[i] == target) {
+        return [arr[i], arr[i]];
+      }
+
+      return [arr[i - 1], arr[i]];
+    }
+  }
+}
+// console.log(getFloorAndCeil([1,2,3,4,5,6,7,8], 6))
+
