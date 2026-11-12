@@ -1,6 +1,9 @@
 import Example1 from "./Components/Example1";
 import Example2 from "./Components/Example2";
 import Example3 from "./Components/Example3";
+import Example4 from "./Components/Example4";
+import Questions from "./Components/Questions";
+import Todo from "./Components/Todo";
 
 const App = () => {
   const name = "Batman";
@@ -13,7 +16,10 @@ const App = () => {
         <h2>Age: 23</h2>
         <div>Hello How are you?</div>
       </Example2> */}
-      <Example3 />
+      {/* <Example3 /> */}
+      {/* <Example4 /> */}
+      {/* <Todo /> */}
+      <Questions />
     </div>
   );
 };
