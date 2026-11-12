@@ -4,37 +4,123 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-      body{
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        background-color: rgb(43, 41, 41);
-        font-family: Arial, Helvetica, sans-serif;
         flex-direction: column;
+        min-height: 100vh;
+        background: #1b1b2f;
+        font-family: Arial, Helvetica, sans-serif;
+        gap: 20px;
+        padding: 20px;
       }
-      .red {
-        background-color: red;
+
+      h2 {
+        color: white;
+        font-size: 42px;
+        text-align: center;
+        letter-spacing: 2px;
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
       }
-      .green {
-        background-color: green;
-      }
-      .yellow {
-        background-color: yellow;
-      }
-      .blue {
-        background-color: blue;
-      }
+
       .container {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
       }
+
       .box {
-        height: 200px;
-        width: 200px;
+        height: 180px;
+        width: 180px;
         margin: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        border: 5px solid rgba(255, 255, 255, 0.15);
+        transition:
+          transform 0.15s ease,
+          box-shadow 0.15s ease,
+          opacity 0.15s ease;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       }
-      .flash{
-        background-color: white;
+
+      .box:hover {
+        transform: scale(1.04);
+      }
+
+      .box:active {
+        transform: scale(0.95);
+      }
+
+      .red {
+        background: #ff4757;
+      }
+
+      .green {
+        background: #2ed573;
+      }
+
+      .yellow {
+        background: #ffa502;
+      }
+
+      .blue {
+        background: #3742fa;
+      }
+
+      .flash {
+        background: white !important;
+        box-shadow: 0 0 35px white;
+        transform: scale(1.05);
+      }
+
+      .game-over {
+        background: #ff4757 !important;
+      }
+
+      .score {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        padding: 12px 25px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        min-width: 180px;
+      }
+
+      /* Responsive Design */
+
+      @media (max-width: 600px) {
+        h2 {
+          font-size: 32px;
+        }
+
+        .box {
+          width: 120px;
+          height: 120px;
+          margin: 7px;
+          border-radius: 15px;
+        }
+
+        .container {
+          gap: 5px;
+        }
+      }
+
+      @media (max-width: 350px) {
+        .box {
+          width: 95px;
+          height: 95px;
+          margin: 5px;
+        }
       }
     </style>
     <title>Document</title>
@@ -51,7 +137,7 @@
         <div class="blue box"></div>
       </div>
     </div>
-
+    <div class="score"></div>
     <script src="script.js"></script>
   </body>
 </html>
