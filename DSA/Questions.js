@@ -737,3 +737,43 @@ function search(nums, target) {
 }
 
 // console.log(search([4,5,6,7,1,2,3],3))
+
+// Minimum in rotated array
+var findMin = function (nums) {
+  let low = 0,
+    high = nums.length - 1;
+
+  while (low < high) {
+    let mid = Math.floor((low + high) / 2);
+
+    if (nums[high] > nums[mid]) {
+      high = mid;
+    } else {
+      low = mid + 1;
+    }
+    ans = nums[low];
+  }
+
+  return nums[low];
+};
+// console.log(findMin([]))
+
+//Single element in sorted array
+
+var singleNonDuplicate = function (nums) {
+  let low = 0,
+    high = nums.length - 1;
+  while (low < high) {
+    let mid = Math.floor((low + high) / 2);
+    console.log(mid)
+    if (nums[mid] != nums[mid - 1] && nums[mid] != nums[mid + 1]) {
+      console.log(nums[mid])
+      return nums[mid];
+    } else if (nums[mid] == nums[mid + 1]) {
+      low = mid + 1;
+    } else {
+      high = mid - 1;
+    }
+  }
+};
+console.log(singleNonDuplicate([1,1,2,3,3,4,4,8,8]))
