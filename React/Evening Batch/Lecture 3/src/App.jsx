@@ -19,7 +19,7 @@ const App = () => {
       {/* <Example3 /> */}
       {/* <Example4 /> */}
       {/* <Todo /> */}
-      <Questions />
+      {/* <Questions /> */}
     </div>
   );
 };

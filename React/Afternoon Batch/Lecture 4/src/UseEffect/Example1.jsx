@@ -14,8 +14,8 @@ const Example1 = () => {
       const data = await res.json();
       setData(data);
     }
-    getData()
-  },[]);
+    getData();
+  }, []);
   console.log("Hello");
 
   return (
