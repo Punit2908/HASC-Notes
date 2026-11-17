@@ -24,8 +24,32 @@
 //   `
 // })
 // divs.innerHTML = `<h1>I am Batman</h1>`
-let hero = document.querySelector(".hero")
-hero.style.color = "pink"
+// let hero = document.querySelector(".hero")
+// hero.style.color = "pink"
 
-let id = document.querySelector("#hero")
-id.style.color = "red"
+// let id = document.querySelector("#hero")
+// id.style.color = "red"
+
+// let div1 = document.getElementsByClassName("hero")
+// console.log(div1)
+
+// let div2 = document.getElementById("hero")
+// console.log(div2)
+
+// let div = document.querySelectorAll("p")
+// console.log(div)
+
+// function changeColor(){
+//   div1[0].style.color = "red"
+//   div2.style.color = "blue"
+  
+//   div.forEach(el=>{
+//     el.style.color = "lightgreen"
+//   })
+// }
+
+let red = document.querySelector(".one")
+let white = document.querySelector(".two")
+let green = document.querySelector(".three")
+
+// red.classList.add("red")
