@@ -52,4 +52,8 @@ let red = document.querySelector(".one")
 let white = document.querySelector(".two")
 let green = document.querySelector(".three")
 
-// red.classList.add("red")
+function tiranga(){
+  red.classList.toggle("red")
+  white.classList.toggle("white")
+  green.classList.toggle("green")
+}
