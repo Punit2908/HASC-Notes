@@ -52,11 +52,11 @@ let red = document.querySelector(".one")
 let white = document.querySelector(".two")
 let green = document.querySelector(".three")
 
-// function tiranga(){
-//   red.classList.toggle("red")
-//   white.classList.toggle("white")
-//   green.classList.toggle("green")
-// }
+function tiranga(){
+  red.classList.toggle("red")
+  white.classList.toggle("white")
+  green.classList.toggle("green")
+}
 // function tiranga(){
 //   red.classList.add("red")
 //   white.classList.add("white")
@@ -70,6 +70,17 @@ let green = document.querySelector(".three")
 
 let btn = document.querySelector("button")
 
-document.addEventListener("keypress", (event)=>{
-  // console.log(event)
-})
+// document.addEventListener("keyup", (event)=>{
+//   console.log(event.key)
+// })
+
+// btn.addEventListener("dblclick", event=>{
+//   tiranga()
+// })
+
+// let p = document.createElement("p")
+// btn.addEventListener("click", ()=>{
+//   console.log("Hello")
+//   p.innerHTML = "<h1>Hello World</h1>"
+//   document.body.append(p)
+// })

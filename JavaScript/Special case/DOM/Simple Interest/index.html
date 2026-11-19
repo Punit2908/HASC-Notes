@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body{
+      background-color: black;
+      color: white;
+    }
+    form{
+      background-color: lightblue;
+      color: black;
+      padding: 20px;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    label{
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    input{
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+    button{
+      padding: 10px;
+      background-color: black;
+      color: white;
+      font-size: 1.2em;
+      font-weight: bold;
+      border-radius: 5px;
+      border: none;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Interest calculator</h2>
+
+  <form action="submit">
+    <label for="principal">Principal</label>
+    <input type="number" name="principal" id="principal">
+    <br>
+    <label for="rate">Rate</label>
+    <input type="number" name="rate" id="rate">
+    <br>
+    <label for="years">Years</label>
+    <input type="number" name="years" id="years">
+    <br>
+    <button>Calculate</button>
+  </form>
+
+  <p id="result"></p>
+  <script src="script.js"></script>
+</body>
+</html>
