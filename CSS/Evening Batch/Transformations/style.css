@@ -1,0 +1,67 @@
+div{
+  /* background-color: lightblue; */
+  height: 100px;
+  width: 100px;
+  border: 2px solid black;
+  margin: 10px;
+}
+
+.one{
+  background-color: lightblue;
+  /* transition: all 0.3s ease-in-out; */
+  animation: move 1s linear infinite;
+}
+
+.one:hover{
+  background-color: red;
+  box-shadow: 2px 2px 4px black;
+  /* transform: translate(10px,10px); */
+  /* transform: translateX(); */
+}
+
+.two{
+  background-color: lightcoral;
+}
+
+.two:hover{
+  transform: rotate(30deg);
+}
+
+.three{
+  background-color: lightgreen;
+}
+.three:hover{
+  transform: scale(0.9);
+}
+
+.four{
+  background-color: lightseagreen;
+}
+.four:hover{
+  transform: skew(-20deg);
+}
+
+.five{
+  background-color: lightskyblue;
+}
+.five:hover{
+  transform: translate(10px,10px) rotate(30deg) scale(1.2) skew(-20deg);
+}
+
+@keyframes move{
+  0%{
+    transform: translate(0px,0px);
+  }
+  25%{
+    transform: translate(100px,0px);
+  }
+  50%{
+    transform: translate(200px,200px);
+  }
+  75%{
+    transform: translate(0px,100px);
+  }
+  100%{
+    transform: translate(0px,0px);
+  }
+}
