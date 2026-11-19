@@ -14,7 +14,7 @@ const App = () => {
   return (
     <div>
       <Greet />
-      <Navbar />
+      {/* <Navbar /> */}
       {/* <h1>{a}</h1>
       <h1>{num}</h1>
       <h2>{arr}</h2>

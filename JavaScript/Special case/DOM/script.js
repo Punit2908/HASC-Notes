@@ -52,8 +52,24 @@ let red = document.querySelector(".one")
 let white = document.querySelector(".two")
 let green = document.querySelector(".three")
 
-function tiranga(){
-  red.classList.toggle("red")
-  white.classList.toggle("white")
-  green.classList.toggle("green")
-}
+// function tiranga(){
+//   red.classList.toggle("red")
+//   white.classList.toggle("white")
+//   green.classList.toggle("green")
+// }
+// function tiranga(){
+//   red.classList.add("red")
+//   white.classList.add("white")
+//   green.classList.add("green")
+// }
+// function removeFlag(){
+//   red.classList.remove("red")
+//   white.classList.remove("white")
+//   green.classList.remove("green")
+// }
+
+let btn = document.querySelector("button")
+
+document.addEventListener("keypress", (event)=>{
+  // console.log(event)
+})
