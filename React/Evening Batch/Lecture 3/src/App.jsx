@@ -6,6 +6,7 @@ import Example5 from "./Components/Example5";
 import Questions from "./Components/Questions";
 import Todo from "./Components/Todo";
 import Example6 from "./Hooks/Example6";
+import Example7 from "./Hooks/Example7";
 
 const App = () => {
   const name = "Batman";
@@ -27,7 +28,8 @@ const App = () => {
         <h2>Name: Batman</h2>
         <h2>Age: 23</h2>
       </Example5> */}
-      <Example6 />
+      {/* <Example6 /> */}
+      <Example7 />
     </div>
   );
 };
