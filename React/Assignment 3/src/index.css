@@ -1,0 +1,21 @@
+button{
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+input{
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin: 10px;
+  background-color: gray;
+  color: white;
+}
+input::placeholder{
+  color: white;
+}
