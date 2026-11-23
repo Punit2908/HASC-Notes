@@ -7,7 +7,7 @@ const Example6 = () => {
   useEffect(() => {
     document.title = count;
     console.log("Hello");
-  },[num]);
+  }, [num]);
   return (
     <div>
       <h2>{count}</h2>
