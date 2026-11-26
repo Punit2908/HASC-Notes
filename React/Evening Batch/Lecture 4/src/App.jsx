@@ -2,6 +2,7 @@ import Login from "./Components/Login"
 import CopyHandler from "./Portal/CopyHandler"
 import Reducer from "./Reducrer/Reducer"
 import Test from "./Reducrer/Test"
+import UseRef from "./Reducrer/UseRef"
 
 const App = () => {
   return (
@@ -9,7 +10,8 @@ const App = () => {
       {/* <Login /> */}
       {/* <CopyHandler /> */}
       {/* <Reducer /> */}
-      <Test />
+      {/* <Test /> */}
+      <UseRef />
     </div>
   )
 }
