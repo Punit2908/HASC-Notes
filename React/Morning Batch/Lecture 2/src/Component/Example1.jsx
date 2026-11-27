@@ -8,7 +8,7 @@ const Example1 = () => {
   const [name, setName] = useState("")
   // console.log(setNum)
   const handleClick = () =>{
-    setNum(num*3)
+    setNum(prev=>prev*3)
   }
   return (
     <div>
